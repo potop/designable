@@ -1,24 +1,24 @@
-import React, { useMemo } from 'react'
-import { createForm } from '@formily/core'
-import { Form } from '@formily/antd'
-import { observer } from '@formily/react'
-import { requestIdle, cancelIdle } from '@designable/shared'
 import {
-  usePrefix,
-  useSelected,
-  useOperation,
-  useSelectedNode,
-  useWorkbench,
   IconWidget,
   NodePathWidget,
+  useOperation,
+  usePrefix,
+  useSelected,
+  useSelectedNode,
+  useWorkbench,
 } from '@designable/react'
-import { SchemaField } from './SchemaField'
-import { ISettingFormProps } from './types'
-import { SettingsFormContext } from './shared/context'
-import { useLocales, useSnapshot } from './effects'
+import { cancelIdle, requestIdle } from '@designable/shared'
+import { Form } from '@formily/antd-v5'
+import { createForm } from '@formily/core'
+import { observer } from '@formily/react'
 import { Empty } from 'antd'
 import cls from 'classnames'
+import React, { useMemo } from 'react'
+import { useLocales, useSnapshot } from './effects'
+import { SchemaField } from './SchemaField'
+import { SettingsFormContext } from './shared/context'
 import './styles.less'
+import { ISettingFormProps } from './types'
 
 const GlobalState = {
   idleRequest: null,

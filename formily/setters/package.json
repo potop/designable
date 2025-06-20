@@ -1,51 +1,50 @@
 {
   "name": "@designable/formily-setters",
-  "version": "1.0.0-beta.45",
-  "license": "MIT",
-  "main": "lib",
-  "module": "esm",
+  "version": "1.0.0-beta.65",
+  "homepage": "https://github.com/alibaba/designable#readme",
+  "bugs": {
+    "url": "https://github.com/alibaba/designable/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alibaba/designable.git"
   },
+  "license": "MIT",
+  "main": "lib",
+  "module": "esm",
   "types": "esm/index.d.ts",
-  "bugs": {
-    "url": "https://github.com/alibaba/designable/issues"
-  },
-  "homepage": "https://github.com/alibaba/designable#readme",
-  "engines": {
-    "npm": ">=3.0.0"
-  },
   "scripts": {
     "build": "rimraf -rf lib esm dist && npm run build:cjs && npm run build:esm && ts-node copy",
     "build:cjs": "tsc --project tsconfig.build.json",
     "build:esm": "tsc --project tsconfig.build.json --module es2015 --outDir esm",
     "start": "webpack-dev-server --config playground/webpack.dev.ts"
   },
+  "dependencies": {
+    "@designable/core": "1.0.0-beta.65",
+    "@designable/formily-transformer": "1.0.0-beta.65",
+    "@designable/react": "1.0.0-beta.65",
+    "@designable/react-settings-form": "1.0.0-beta.65"
+  },
   "devDependencies": {
-    "@formily/antd": "^2.0.2",
-    "@formily/core": "^2.0.2",
-    "@formily/react": "^2.0.2",
-    "@formily/shared": "^2.0.2",
-    "antd": "^4.0.0"
+    "@ant-design/v5-patch-for-react-19": "^1.0.3",
+    "@formily/antd-v5": "^1.2.4",
+    "@formily/react": "^2.3.7",
+    "@formily/shared": "^2.3.7",
+    "antd": "^5.26.1"
   },
   "peerDependencies": {
-    "@formily/antd": "^2.0.2",
-    "@formily/core": "^2.0.2",
-    "@formily/react": "^2.0.2",
-    "@formily/shared": "^2.0.2",
-    "@types/react": ">=16.8.0 || >=17.0.0",
-    "@types/react-dom": ">=16.8.0 || >=17.0.0",
-    "antd": "^4.0.0",
-    "react": ">=16.8.0 || >=17.0.0",
-    "react-dom": ">=16.8.0",
-    "react-is": ">=16.8.0 || >=17.0.0"
+    "@formily/antd-v5": "^1.2.4",
+    "@formily/react": "^2.3.7",
+    "@formily/shared": "^2.3.7",
+    "@types/react": ">=16.8.0 || >=19.0.0",
+    "@types/react-dom": ">=16.8.0 || >=19.0.0",
+    "antd": "^5.26.1",
+    "react": ">=16.8.0 || >=19.0.0",
+    "react-dom": ">=19.0.0",
+    "react-is": ">=16.8.0 || >=19.0.0"
   },
-  "dependencies": {
-    "@designable/core": "1.0.0-beta.45",
-    "@designable/formily-transformer": "1.0.0-beta.45",
-    "@designable/react": "1.0.0-beta.45",
-    "@designable/react-settings-form": "1.0.0-beta.45"
+  "engines": {
+    "npm": ">=3.0.0"
   },
   "publishConfig": {
     "access": "public"

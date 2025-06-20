@@ -1,11 +1,11 @@
-import React from 'react'
-import { useField, Field, observer } from '@formily/react'
+import { IconWidget, usePrefix } from '@designable/react'
+import { FormItem } from '@formily/antd-v5'
 import { Field as FieldType } from '@formily/core'
-import { FormItem } from '@formily/antd'
+import { Field, observer, useField } from '@formily/react'
 import { Radio } from 'antd'
-import { usePrefix, IconWidget } from '@designable/react'
-import { FlexStyleSetter } from '../FlexStyleSetter'
 import cls from 'classnames'
+import React from 'react'
+import { FlexStyleSetter } from '../FlexStyleSetter'
 import './styles.less'
 export interface IDisplayStyleSetterProps {
   className?: string

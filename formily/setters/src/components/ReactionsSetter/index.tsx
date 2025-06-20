@@ -1,26 +1,26 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import { clone, uid } from '@formily/shared'
-import { createForm, isVoidField } from '@formily/core'
-import { createSchemaField } from '@formily/react'
 import { GlobalRegistry } from '@designable/core'
-import { requestIdle } from '@designable/shared'
-import { usePrefix, TextWidget } from '@designable/react'
+import { TextWidget, usePrefix } from '@designable/react'
 import { MonacoInput } from '@designable/react-settings-form'
+import { requestIdle } from '@designable/shared'
 import {
-  Form,
   ArrayTable,
+  Form,
+  FormCollapse,
+  FormItem,
   Input,
   Select,
-  FormItem,
-  FormCollapse,
-} from '@formily/antd'
-import { Modal, Card, Button, Tag, Tooltip } from 'antd'
-import { PathSelector } from './PathSelector'
+} from '@formily/antd-v5'
+import { createForm, isVoidField } from '@formily/core'
+import { createSchemaField } from '@formily/react'
+import { clone, uid } from '@formily/shared'
+import { Button, Card, Modal, Tag, Tooltip } from 'antd'
+import React, { useEffect, useMemo, useState } from 'react'
+import { initDeclaration } from './declarations'
 import { FieldPropertySetter } from './FieldPropertySetter'
 import { FulfillRunHelper } from './helpers'
-import { IReaction } from './types'
-import { initDeclaration } from './declarations'
+import { PathSelector } from './PathSelector'
 import './styles.less'
+import { IReaction } from './types'
 
 export interface IReactionsSetterProps {
   value?: IReaction
@@ -178,12 +178,16 @@ export const ReactionsSetter: React.FC<IReactionsSetterProps> = (props) => {
         )}
         width="70%"
         centered
-        bodyStyle={{ padding: 10 }}
+        styles={{
+          body: {
+            padding: 10,
+          },
+        }}
         transitionName=""
         maskTransitionName=""
-        visible={modalVisible}
+        open={modalVisible}
         onCancel={closeModal}
-        destroyOnClose
+        destroyOnHidden
         onOk={() => {
           form.submit((values) => {
             props.onChange?.(values)

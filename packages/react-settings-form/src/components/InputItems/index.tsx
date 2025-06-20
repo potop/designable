@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
-import { usePrefix, IconWidget } from '@designable/react'
+import { IconWidget, usePrefix } from '@designable/react'
 import cls from 'classnames'
+import React, { PropsWithChildren, useContext } from 'react'
 import './styles.less'
 
 export interface IInputItemsContext {
@@ -26,12 +26,12 @@ export interface IInputItemProps {
 
 const InputItemsContext = React.createContext<IInputItemsContext>(null)
 
-export const InputItems: React.FC<IInputItemsProps> & {
-  Item: React.FC<IInputItemProps>
-} = (props) => {
+export const InputItems: React.FC<PropsWithChildren<IInputItemsProps>> & {
+  Item: React.FC<PropsWithChildren<IInputItemProps>>
+} = ({ width = '100%', ...props }) => {
   const prefix = usePrefix('input-items')
   return (
-    <InputItemsContext.Provider value={props}>
+    <InputItemsContext.Provider value={{ width, ...props }}>
       <div className={cls(prefix, props.className)} style={props.style}>
         {props.children}
       </div>
@@ -39,11 +39,7 @@ export const InputItems: React.FC<IInputItemsProps> & {
   )
 }
 
-InputItems.defaultProps = {
-  width: '100%',
-}
-
-InputItems.Item = (props) => {
+InputItems.Item = (props: PropsWithChildren<IInputItemProps>) => {
   const prefix = usePrefix('input-items-item')
   const ctx = useContext(InputItemsContext)
   return (

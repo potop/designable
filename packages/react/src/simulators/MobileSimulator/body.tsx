@@ -1,6 +1,6 @@
 import { observer } from '@formily/reactive-react'
 import React from 'react'
-import { useScreen, usePrefix, useTheme } from '../../hooks'
+import { usePrefix, useScreen, useTheme } from '../../hooks'
 
 export interface IMobileBodyProps {}
 
@@ -74,5 +74,3 @@ export const MobileBody: React.FC<IMobileBodyProps> = observer((props) => {
     </div>
   )
 })
-
-MobileBody.defaultProps = {}

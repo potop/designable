@@ -1,8 +1,8 @@
-import path from 'path'
+import autoprefixer from 'autoprefixer'
 import fs from 'fs-extra'
 import { GlobSync } from 'glob'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import autoprefixer from 'autoprefixer'
+import path from 'path'
 //import { getThemeVariables } from 'antd/dist/theme'
 
 const getWorkspaceAlias = () => {
@@ -44,10 +44,10 @@ export default {
     alias: getWorkspaceAlias(),
   },
   externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-    moment: 'moment',
-    antd: 'antd',
+    // react: 'React',
+    // 'react-dom': 'ReactDOM',
+    // moment: 'moment',
+    // antd: 'antd',
   },
   module: {
     rules: [
@@ -74,7 +74,9 @@ export default {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => autoprefixer(),
+              postcssOptions: {
+                plugins: [autoprefixer()],
+              },
             },
           },
           {

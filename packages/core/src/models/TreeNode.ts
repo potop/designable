@@ -1,26 +1,26 @@
+import { each, isFn, uid } from '@designable/shared'
 import { action, define, observable, toJS } from '@formily/reactive'
-import { uid, isFn, each } from '@designable/shared'
-import { Operation } from './Operation'
 import {
-  InsertBeforeEvent,
-  InsertAfterEvent,
-  InsertChildrenEvent,
-  PrependNodeEvent,
   AppendNodeEvent,
-  WrapNodeEvent,
-  UpdateChildrenEvent,
-  RemoveNodeEvent,
-  UpdateNodePropsEvent,
   CloneNodeEvent,
   FromNodeEvent,
+  InsertAfterEvent,
+  InsertBeforeEvent,
+  InsertChildrenEvent,
+  PrependNodeEvent,
+  RemoveNodeEvent,
+  UpdateChildrenEvent,
+  UpdateNodePropsEvent,
+  WrapNodeEvent,
 } from '../events'
+import { mergeLocales } from '../internals'
+import { GlobalRegistry } from '../registry'
 import {
   IDesignerControllerProps,
-  IDesignerProps,
   IDesignerLocales,
+  IDesignerProps,
 } from '../types'
-import { GlobalRegistry } from '../registry'
-import { mergeLocales } from '../internals'
+import { Operation } from './Operation'
 
 export interface ITreeNode {
   componentName?: string
@@ -338,7 +338,8 @@ export class TreeNode {
 
   triggerMutation<T>(event: any, callback?: () => T, defaults?: T): T {
     if (this.operation) {
-      const result = this.operation.dispatch(event, callback) || defaults
+      const result =
+        (this.operation.dispatch(event, callback) as any) || defaults
       this.takeSnapshot(event?.type)
       return result
     } else if (isFn(callback)) {

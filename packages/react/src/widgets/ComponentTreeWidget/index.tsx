@@ -1,10 +1,10 @@
-import React, { Fragment, useEffect } from 'react'
-import { useTree, usePrefix, useDesigner, useComponents } from '../../hooks'
-import { TreeNodeContext, DesignerComponentsContext } from '../../context'
-import { IDesignerComponents } from '../../types'
-import { TreeNode, GlobalRegistry } from '@designable/core'
+import { GlobalRegistry, TreeNode } from '@designable/core'
 import { observer } from '@formily/reactive-react'
 import cls from 'classnames'
+import React, { Fragment, useEffect } from 'react'
+import { DesignerComponentsContext, TreeNodeContext } from '../../context'
+import { useComponents, useDesigner, usePrefix, useTree } from '../../hooks'
+import { IDesignerComponents } from '../../types'
 import './styles.less'
 
 export interface IComponentTreeWidgetProps {
@@ -15,7 +15,7 @@ export interface IComponentTreeWidgetProps {
 
 export interface ITreeNodeWidgetProps {
   node: TreeNode
-  children?: React.ReactChild
+  children?: React.ReactNode
 }
 
 export const TreeNodeWidget: React.FC<ITreeNodeWidgetProps> = observer(

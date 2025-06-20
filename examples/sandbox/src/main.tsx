@@ -1,34 +1,33 @@
-import React, { useEffect } from 'react'
-import ReactDOM from 'react-dom'
+import { GithubOutlined } from '@ant-design/icons'
 import {
-  Designer,
-  IconWidget,
-  Workbench,
-  ViewPanel,
-  DesignerToolsWidget,
-  ViewToolsWidget,
-  OutlineTreeWidget,
-  ResourceWidget,
-  StudioPanel,
-  CompositePanel,
-  WorkspacePanel,
-  ToolbarPanel,
-  ViewportPanel,
-  SettingsPanel,
-  HistoryWidget,
-} from '@designable/react'
-import { SettingsForm, MonacoInput } from '@designable/react-settings-form'
-import { observer } from '@formily/react'
-import {
+  createBehavior,
   createDesigner,
   createResource,
-  createBehavior,
   GlobalRegistry,
 } from '@designable/core'
-import { Space, Button, Radio } from 'antd'
-import { GithubOutlined } from '@ant-design/icons'
+import {
+  CompositePanel,
+  Designer,
+  DesignerToolsWidget,
+  HistoryWidget,
+  IconWidget,
+  OutlineTreeWidget,
+  ResourceWidget,
+  SettingsPanel,
+  StudioPanel,
+  ToolbarPanel,
+  ViewPanel,
+  ViewportPanel,
+  ViewToolsWidget,
+  Workbench,
+  WorkspacePanel,
+} from '@designable/react'
 import { Sandbox } from '@designable/react-sandbox'
-import 'antd/dist/antd.less'
+import { MonacoInput, SettingsForm } from '@designable/react-settings-form'
+import { observer } from '@formily/react'
+import { Button, Radio, Space } from 'antd'
+import React, { useEffect } from 'react'
+import { createRoot } from 'react-dom/client'
 
 const RootBehavior = createBehavior({
   name: 'Root',
@@ -396,4 +395,9 @@ const App = () => {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+// React 18+ way to render
+const container = document.getElementById('root')
+if (container) {
+  const root = createRoot(container)
+  root.render(<App />)
+}

@@ -1,7 +1,7 @@
-import baseConfig from './webpack.base'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import MonacoPlugin from 'monaco-editor-webpack-plugin'
+import baseConfig from './webpack.base'
+// import MonacoPlugin from 'monaco-editor-webpack-plugin'
 import path from 'path'
 
 const createPages = (pages) => {
@@ -30,9 +30,9 @@ export default {
         chunk: ['playground'],
       },
     ]),
-    new MonacoPlugin({
-      languages: ['json'],
-    }),
+    // new MonacoPlugin({
+    //   languages: ['json'],
+    // }),
   ],
   optimization: {
     minimize: true,

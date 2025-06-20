@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
 import { isValid } from '@designable/shared'
 import cls from 'classnames'
-import { IconWidget, TextWidget } from '../widgets'
+import React, { PropsWithChildren, useEffect, useRef, useState } from 'react'
 import { usePrefix } from '../hooks'
+import { IconWidget, TextWidget } from '../widgets'
 
 export interface ICompositePanelProps {
   direction?: 'left' | 'right'
@@ -51,8 +51,10 @@ const getDefaultKey = (children: React.ReactNode) => {
   return items?.[0].key
 }
 
-export const CompositePanel: React.FC<ICompositePanelProps> & {
-  Item: React.FC<ICompositePanelItemProps>
+export const CompositePanel: React.FC<
+  PropsWithChildren<ICompositePanelProps>
+> & {
+  Item: React.FC<PropsWithChildren<ICompositePanelItemProps>>
 } = (props) => {
   const prefix = usePrefix('composite-panel')
   const [activeKey, setActiveKey] = useState<string | number>(

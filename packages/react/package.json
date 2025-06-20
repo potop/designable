@@ -1,41 +1,42 @@
 {
   "name": "@designable/react",
-  "version": "1.0.0-beta.45",
-  "license": "MIT",
-  "main": "lib",
-  "types": "lib/index.d.ts",
-  "engines": {
-    "npm": ">=3.0.0"
+  "version": "1.0.0-beta.65",
+  "homepage": "https://github.com/alibaba/designable#readme",
+  "bugs": {
+    "url": "https://github.com/alibaba/designable/issues"
   },
-  "module": "esm",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alibaba/designable.git"
   },
-  "bugs": {
-    "url": "https://github.com/alibaba/designable/issues"
-  },
-  "homepage": "https://github.com/alibaba/designable#readme",
+  "license": "MIT",
+  "main": "lib",
+  "module": "esm",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "rimraf -rf lib esm dist && npm run build:cjs && npm run build:esm && npm run build:umd && ts-node copy",
     "build:cjs": "tsc --project tsconfig.build.json",
     "build:esm": "tsc --project tsconfig.build.json --module es2015 --outDir esm",
     "build:umd": "rollup --config"
   },
+  "dependencies": {
+    "@designable/core": "1.0.0-beta.65",
+    "@designable/shared": "1.0.0-beta.65",
+    "dateformat": "^4.5.1"
+  },
   "devDependencies": {
-    "@formily/reactive": "^2.0.2",
-    "@formily/reactive-react": "^2.0.2"
+    "@formily/reactive": "^2.3.7",
+    "@formily/reactive-react": "^2.3.7"
   },
   "peerDependencies": {
-    "@formily/reactive": "^2.0.2",
-    "@formily/reactive-react": "^2.0.2",
-    "antd": "^4.15.4",
-    "react": "16.x || 17.x"
+    "@formily/reactive": "^2.3.7",
+    "@formily/reactive-react": "^2.3.7",
+    "antd": "^5.26.1",
+    "react": "18.x || 19.x"
   },
-  "dependencies": {
-    "@designable/core": "1.0.0-beta.45",
-    "@designable/shared": "1.0.0-beta.45",
-    "dateformat": "^4.5.1"
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=3.0.0"
   },
   "publishConfig": {
     "access": "public"

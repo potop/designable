@@ -1,19 +1,19 @@
-import React, { useMemo, useRef, Fragment } from 'react'
-import { useDesigner } from '../hooks'
+import React, { Fragment, PropsWithChildren, useMemo, useRef } from 'react'
 import { WorkspaceContext } from '../context'
+import { useDesigner } from '../hooks'
 export interface IWorkspaceProps {
   id?: string
   title?: string
   description?: string
 }
 
-export const Workspace: React.FC<IWorkspaceProps> = ({
+export const Workspace: React.FC<PropsWithChildren<IWorkspaceProps>> = ({
   id,
   title,
   description,
   ...props
 }) => {
-  const oldId = useRef<string>()
+  const oldId = useRef<string>(null)
   const designer = useDesigner()
   const workspace = useMemo(() => {
     if (!designer) return

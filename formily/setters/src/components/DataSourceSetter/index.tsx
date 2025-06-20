@@ -1,15 +1,15 @@
-import React, { Fragment, useMemo, useState } from 'react'
-import cls from 'classnames'
-import { Modal, Button } from 'antd'
+import { TextWidget, usePrefix, useTheme } from '@designable/react'
 import { Form } from '@formily/core'
 import { observable } from '@formily/reactive'
 import { observer } from '@formily/reactive-react'
-import { usePrefix, useTheme, TextWidget } from '@designable/react'
+import { Button, Modal } from 'antd'
+import cls from 'classnames'
+import React, { Fragment, useMemo, useState } from 'react'
 import { DataSettingPanel } from './DataSettingPanel'
 import { TreePanel } from './TreePanel'
 import { transformDataToValue, transformValueToData } from './shared'
-import { IDataSourceItem, ITreeDataSource } from './types'
 import './styles.less'
+import { IDataSourceItem, ITreeDataSource } from './types'
 export interface IDataSourceSetterProps {
   className?: string
   style?: React.CSSProperties
@@ -58,10 +58,14 @@ export const DataSourceSetter: React.FC<IDataSourceSetterProps> = observer(
             <TextWidget token="SettingComponents.DataSourceSetter.configureDataSource" />
           }
           width="65%"
-          bodyStyle={{ padding: 10 }}
+          styles={{
+            body: {
+              padding: 10,
+            },
+          }}
           transitionName=""
           maskTransitionName=""
-          visible={modalVisible}
+          open={modalVisible}
           onCancel={closeModal}
           onOk={() => {
             onChange(transformDataToValue(treeDataSource.dataSource))

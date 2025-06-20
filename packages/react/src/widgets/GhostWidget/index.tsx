@@ -1,15 +1,15 @@
-import React, { useRef, useEffect } from 'react'
-import { useCursor, usePrefix, useDesigner } from '../../hooks'
 import { CursorStatus } from '@designable/core'
 import { autorun } from '@formily/reactive'
 import { observer } from '@formily/reactive-react'
+import React, { useEffect, useRef } from 'react'
+import { useCursor, useDesigner, usePrefix } from '../../hooks'
 import { NodeTitleWidget } from '../NodeTitleWidget'
 import './styles.less'
 
 export const GhostWidget = observer(() => {
   const designer = useDesigner()
   const cursor = useCursor()
-  const ref = useRef<HTMLDivElement>()
+  const ref = useRef<HTMLDivElement>(null)
   const prefix = usePrefix('ghost')
   const movingNodes = designer.findMovingNodes()
   const firstNode = movingNodes[0]

@@ -1,31 +1,33 @@
-import React from 'react'
-import { FormGrid as FormilyGird } from '@formily/antd'
 import { TreeNode, createBehavior, createResource } from '@designable/core'
 import {
   DnFC,
-  useTreeNode,
-  useNodeIdProps,
   DroppableWidget,
+  useNodeIdProps,
+  useTreeNode,
 } from '@designable/react'
+import { FormGrid as FormilyGird } from '@formily/antd-v5'
 import { observer } from '@formily/reactive-react'
+import React, { PropsWithChildren } from 'react'
 import { LoadTemplate } from '../../common/LoadTemplate'
-import { createFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
+import { createFieldSchema } from '../Field'
 import './styles.less'
 
 type formilyGrid = typeof FormilyGird
 
 export const FormGrid: DnFC<React.ComponentProps<formilyGrid>> & {
-  GridColumn?: React.FC<React.ComponentProps<formilyGrid['GridColumn']>>
-} = observer((props) => {
+  GridColumn?: React.FC<
+    PropsWithChildren<React.ComponentProps<formilyGrid['GridColumn']>>
+  >
+} = observer(({ children, ...props }) => {
   const node = useTreeNode()
   const nodeId = useNodeIdProps()
   if (node.children.length === 0) return <DroppableWidget {...props} />
 
   return (
     <div {...nodeId} className="dn-grid">
-      <FormilyGird {...props}>{props.children}</FormilyGird>
+      <FormilyGird {...props}>{children}</FormilyGird>
       <LoadTemplate
         actions={[
           {
@@ -48,10 +50,10 @@ export const FormGrid: DnFC<React.ComponentProps<formilyGrid>> & {
   )
 })
 
-FormGrid.GridColumn = observer(({ gridSpan, ...props }) => {
+FormGrid.GridColumn = observer(({ gridSpan, children, ...props }) => {
   return (
     <DroppableWidget {...props} data-grid-span={gridSpan}>
-      {props.children}
+      {children}
     </DroppableWidget>
   )
 })

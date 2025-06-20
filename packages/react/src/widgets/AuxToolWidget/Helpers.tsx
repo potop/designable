@@ -1,12 +1,12 @@
-import React, { useRef, useState, useLayoutEffect } from 'react'
 import { TreeNode } from '@designable/core'
 import { reaction } from '@formily/reactive'
+import cls from 'classnames'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import { usePrefix, useViewport } from '../../hooks'
-import { Selector } from './Selector'
 import { Copy } from './Copy'
 import { Delete } from './Delete'
 import { DragHandler } from './DragHandler'
-import cls from 'classnames'
+import { Selector } from './Selector'
 
 const HELPER_DEBOUNCE_TIMEOUT = 100
 
@@ -27,7 +27,7 @@ export const Helpers: React.FC<IHelpersProps> = ({ node, nodeRect }) => {
   const prefix = usePrefix('aux-helpers')
   const viewport = useViewport()
   const unmountRef = useRef(false)
-  const ref = useRef<HTMLDivElement>()
+  const ref = useRef<HTMLDivElement>(null)
   const [position, setPosition] = useState('top-right')
 
   useLayoutEffect(() => {

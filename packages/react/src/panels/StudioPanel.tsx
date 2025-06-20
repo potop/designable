@@ -1,7 +1,8 @@
-import React from 'react'
-import { usePrefix, usePosition } from '../hooks'
-import { Layout } from '../containers'
 import cls from 'classnames'
+import React, { PropsWithChildren } from 'react'
+import { Layout } from '../containers'
+import { usePosition, usePrefix } from '../hooks'
+
 export interface IStudioPanelProps {
   style?: React.CSSProperties
   className?: string
@@ -12,7 +13,7 @@ export interface IStudioPanelProps {
   position?: React.ComponentProps<typeof Layout>['position']
 }
 
-const StudioPanelInternal: React.FC<IStudioPanelProps> = ({
+const StudioPanelInternal: React.FC<PropsWithChildren<IStudioPanelProps>> = ({
   logo,
   actions,
   ...props
@@ -38,7 +39,9 @@ const StudioPanelInternal: React.FC<IStudioPanelProps> = ({
   )
 }
 
-export const StudioPanel: React.FC<IStudioPanelProps> = (props) => {
+export const StudioPanel: React.FC<PropsWithChildren<IStudioPanelProps>> = (
+  props
+) => {
   return (
     <Layout
       theme={props.theme}

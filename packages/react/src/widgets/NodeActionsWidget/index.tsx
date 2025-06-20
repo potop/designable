@@ -1,10 +1,10 @@
-import React from 'react'
-import { Space, Typography, Divider, TypographyProps } from 'antd'
 import { observer } from '@formily/reactive-react'
-import { usePrefix, useTreeNode, useSelected } from '../../hooks'
+import { Divider, Space, Typography, TypographyProps } from 'antd'
+import cls from 'classnames'
+import React, { PropsWithChildren } from 'react'
+import { usePrefix, useSelected, useTreeNode } from '../../hooks'
 import { IconWidget } from '../IconWidget'
 import { TextWidget } from '../TextWidget'
-import cls from 'classnames'
 import './styles.less'
 
 export interface INodeActionsWidgetProps {
@@ -22,9 +22,11 @@ export interface INodeActionsWidgetActionProps
   icon?: React.ReactNode
 }
 
-export const NodeActionsWidget: React.FC<INodeActionsWidgetProps> & {
+export const NodeActionsWidget: React.FC<
+  PropsWithChildren<INodeActionsWidgetProps>
+> & {
   Action?: React.FC<INodeActionsWidgetActionProps>
-} = observer((props) => {
+} = observer(({ children, ...props }) => {
   const node = useTreeNode()
   const prefix = usePrefix('node-actions')
   const selected = useSelected()
@@ -32,7 +34,7 @@ export const NodeActionsWidget: React.FC<INodeActionsWidgetProps> & {
   return (
     <div className={cls(prefix, props.className)} style={props.style}>
       <div className={prefix + '-content'}>
-        <Space split={<Divider type="vertical" />}>{props.children}</Space>
+        <Space split={<Divider type="vertical" />}>{children}</Space>
       </div>
     </div>
   )

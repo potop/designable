@@ -1,29 +1,29 @@
-import React from 'react'
-import { Table, TableProps } from 'antd'
 import { TreeNode, createBehavior, createResource } from '@designable/core'
 import {
-  useTreeNode,
-  TreeNodeWidget,
-  DroppableWidget,
-  useNodeIdProps,
   DnFC,
+  DroppableWidget,
+  TreeNodeWidget,
+  useNodeIdProps,
+  useTreeNode,
 } from '@designable/react'
-import { ArrayBase } from '@formily/antd'
+import { ArrayBase } from '@formily/antd-v5'
 import { observer } from '@formily/react'
-import { LoadTemplate } from '../../common/LoadTemplate'
+import { Table, TableProps } from 'antd'
 import cls from 'classnames'
-import {
-  queryNodesByComponentPath,
-  hasNodeByComponentPath,
-  findNodeByComponentPath,
-  createEnsureTypeItemsNode,
-} from '../../shared'
+import React from 'react'
+import { LoadTemplate } from '../../common/LoadTemplate'
 import { useDropTemplate } from '../../hooks'
-import { createArrayBehavior } from '../ArrayBase'
-import './styles.less'
-import { createVoidFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
+import {
+  createEnsureTypeItemsNode,
+  findNodeByComponentPath,
+  hasNodeByComponentPath,
+  queryNodesByComponentPath,
+} from '../../shared'
+import { createArrayBehavior } from '../ArrayBase'
+import { createVoidFieldSchema } from '../Field'
+import './styles.less'
 
 const ensureObjectItemsNode = createEnsureTypeItemsNode('object')
 

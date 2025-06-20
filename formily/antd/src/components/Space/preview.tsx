@@ -1,11 +1,11 @@
-import React from 'react'
-import { Space as FormilySpace } from '@formily/antd'
 import { createBehavior, createResource } from '@designable/core'
 import { DnFC } from '@designable/react'
-import { createVoidFieldSchema } from '../Field'
+import { Space as FormilySpace } from '@formily/antd-v5'
+import React from 'react'
 import { withContainer } from '../../common/Container'
-import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
+import { createVoidFieldSchema } from '../Field'
 
 export const Space: DnFC<React.ComponentProps<typeof FormilySpace>> =
   withContainer(FormilySpace)

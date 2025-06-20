@@ -1,10 +1,10 @@
-import React from 'react'
-import { Cascader as FormilyCascader } from '@formily/antd'
 import { createBehavior, createResource } from '@designable/core'
 import { DnFC } from '@designable/react'
-import { createFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
+import { Cascader as FormilyCascader } from '@formily/antd-v5'
+import React from 'react'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
+import { createFieldSchema } from '../Field'
 
 export const Cascader: DnFC<React.ComponentProps<typeof FormilyCascader>> =
   FormilyCascader

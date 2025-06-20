@@ -1,6 +1,6 @@
-import path from 'path'
 import fs from 'fs-extra'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import path from 'path'
 //import { getThemeVariables } from 'antd/dist/theme'
 
 const getAlias = () => {
@@ -11,7 +11,7 @@ const getAlias = () => {
     if (key.includes('@designable/')) {
       return deps
     } else if (key.includes('react')) {
-      deps[key] = require.resolve(key)
+      // deps[key] = require.resolve(key)
       return deps
     }
     deps[key] = key
@@ -52,11 +52,11 @@ export default {
     alias: getAlias(),
   },
   externals: {
-    '@formily/reactive': 'Formily.Reactive',
-    react: 'React',
-    'react-dom': 'ReactDOM',
-    moment: 'moment',
-    antd: 'antd',
+    // '@formily/reactive': 'Formily.Reactive',
+    // react: 'React',
+    // 'react-dom': 'ReactDOM',
+    // moment: 'moment',
+    // antd: 'antd',
   },
   module: {
     rules: [

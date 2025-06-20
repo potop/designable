@@ -1,15 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react'
-import Editor, { EditorProps, loader } from '@monaco-editor/react'
-import { TextWidget, IconWidget, usePrefix, useTheme } from '@designable/react'
-import * as monaco from 'monaco-editor/esm/vs/editor/editor.api'
-import { Tooltip } from 'antd'
-import { parseExpression, parse } from '@babel/parser'
+import { parse, parseExpression } from '@babel/parser'
+import { IconWidget, TextWidget, usePrefix, useTheme } from '@designable/react'
 import { uid } from '@designable/shared'
-import { format } from './format'
+import Editor, { EditorProps, loader } from '@monaco-editor/react'
+import { Tooltip } from 'antd'
 import cls from 'classnames'
-import './styles.less'
+import * as monaco from 'monaco-editor/esm/vs/editor/editor.api'
+import React, { useEffect, useRef, useState } from 'react'
 import './config'
 import { initMonaco } from './config'
+import { format } from './format'
+import './styles.less'
 
 export type Monaco = typeof monaco
 export interface MonacoInputProps extends EditorProps {
@@ -42,8 +42,8 @@ export const MonacoInput: React.FC<MonacoInputProps> & {
   const submitRef = useRef(null)
   const declarationRef = useRef<string[]>([])
   const extraLibRef = useRef<monaco.IDisposable>(null)
-  const monacoRef = useRef<Monaco>()
-  const editorRef = useRef<monaco.editor.IStandaloneCodeEditor>()
+  const monacoRef = useRef<Monaco>(null)
+  const editorRef = useRef<monaco.editor.IStandaloneCodeEditor>(null)
   const computedLanguage = useRef<string>(language || defaultLanguage)
   const realLanguage = useRef<string>('')
   const unmountedRef = useRef(false)

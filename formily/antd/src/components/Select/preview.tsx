@@ -1,10 +1,10 @@
-import React from 'react'
-import { Select as FormilySelect } from '@formily/antd'
 import { createBehavior, createResource } from '@designable/core'
 import { DnFC } from '@designable/react'
-import { createFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
+import { Select as FormilySelect } from '@formily/antd-v5'
+import React from 'react'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
+import { createFieldSchema } from '../Field'
 
 export const Select: DnFC<React.ComponentProps<typeof FormilySelect>> =
   FormilySelect

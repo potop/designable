@@ -1,11 +1,11 @@
-import React, { useMemo } from 'react'
 import { createBehavior, createResource } from '@designable/core'
+import { DnFC, usePrefix } from '@designable/react'
+import { Form as FormilyForm } from '@formily/antd-v5'
 import { createForm } from '@formily/core'
 import { observer } from '@formily/react'
-import { Form as FormilyForm } from '@formily/antd'
-import { usePrefix, DnFC } from '@designable/react'
-import { AllSchemas } from '../../schemas'
+import React, { useMemo } from 'react'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
 import './styles.less'
 
 export const Form: DnFC<React.ComponentProps<typeof FormilyForm>> = observer(

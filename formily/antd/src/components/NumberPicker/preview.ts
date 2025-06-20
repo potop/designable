@@ -1,10 +1,10 @@
-import React from 'react'
-import { NumberPicker as FormilyNumberPicker } from '@formily/antd'
 import { createBehavior, createResource } from '@designable/core'
 import { DnFC } from '@designable/react'
-import { createFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
+import { NumberPicker as FormilyNumberPicker } from '@formily/antd-v5'
+import React from 'react'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
+import { createFieldSchema } from '../Field'
 
 export const NumberPicker: DnFC<
   React.ComponentProps<typeof FormilyNumberPicker>

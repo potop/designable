@@ -20,6 +20,7 @@ tsconfig.tsbuildinfo
 package/
 benchmark
 package.zip
+.dumi
 .umi
 .umi-production
 .cjsescache

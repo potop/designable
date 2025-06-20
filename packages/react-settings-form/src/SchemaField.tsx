@@ -1,44 +1,45 @@
-import { createSchemaField } from '@formily/react'
 import {
-  FormItem,
-  Input,
-  NumberPicker,
-  DatePicker,
-  TimePicker,
-  Select,
-  Radio,
-  Switch,
-  Space,
   ArrayItems,
   ArrayTable,
+  DatePicker,
   FormCollapse,
   FormGrid,
+  FormItem,
   FormLayout,
   FormTab,
-} from '@formily/antd'
+  Input,
+  NumberPicker,
+  Radio,
+  Select,
+  Space,
+  Switch,
+  TimePicker,
+} from '@formily/antd-v5'
+import { createSchemaField, ISchemaFieldProps } from '@formily/react'
 import { Slider } from 'antd'
+import React from 'react'
 import {
-  SizeInput,
-  ColorInput,
-  ImageInput,
   BackgroundImageInput,
-  PositionInput,
-  CornerInput,
-  MonacoInput,
-  ValueInput,
-  BoxStyleSetter,
-  BorderStyleSetter,
-  BorderRadiusStyleSetter,
   BackgroundStyleSetter,
+  BorderRadiusStyleSetter,
+  BorderStyleSetter,
   BoxShadowStyleSetter,
-  FontStyleSetter,
-  DisplayStyleSetter,
-  FlexStyleSetter,
-  DrawerSetter,
+  BoxStyleSetter,
   CollapseItem,
+  ColorInput,
+  CornerInput,
+  DisplayStyleSetter,
+  DrawerSetter,
+  FlexStyleSetter,
+  FontStyleSetter,
+  ImageInput,
+  MonacoInput,
+  PositionInput,
+  SizeInput,
+  ValueInput,
 } from './components'
 
-export const SchemaField = createSchemaField({
+export const SchemaField: React.FC<ISchemaFieldProps> = createSchemaField({
   components: {
     FormItem,
     CollapseItem,

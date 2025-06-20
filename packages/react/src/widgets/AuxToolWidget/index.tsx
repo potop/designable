@@ -1,19 +1,19 @@
 import React, { useEffect, useRef } from 'react'
-import { useViewport, useDesigner, usePrefix } from '../../hooks'
-import { Insertion } from './Insertion'
-import { Selection } from './Selection'
-import { FreeSelection } from './FreeSelection'
+import { useDesigner, usePrefix, useViewport } from '../../hooks'
 import { Cover } from './Cover'
 import { DashedBox } from './DashedBox'
-import { SpaceBlock } from './SpaceBlock'
+import { FreeSelection } from './FreeSelection'
+import { Insertion } from './Insertion'
+import { Selection } from './Selection'
 import { SnapLine } from './SnapLine'
+import { SpaceBlock } from './SpaceBlock'
 import './styles.less'
 
 export const AuxToolWidget = () => {
   const engine = useDesigner()
   const viewport = useViewport()
   const prefix = usePrefix('auxtool')
-  const ref = useRef<HTMLDivElement>()
+  const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
     return engine.subscribeWith('viewport:scroll', () => {
       if (viewport.isIframe && ref.current) {

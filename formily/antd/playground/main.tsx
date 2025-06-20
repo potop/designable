@@ -1,70 +1,69 @@
-import 'antd/dist/antd.less'
-import React, { useMemo } from 'react'
-import ReactDOM from 'react-dom'
-import {
-  Designer,
-  DesignerToolsWidget,
-  ViewToolsWidget,
-  Workspace,
-  OutlineTreeWidget,
-  ResourceWidget,
-  HistoryWidget,
-  StudioPanel,
-  CompositePanel,
-  WorkspacePanel,
-  ToolbarPanel,
-  ViewportPanel,
-  ViewPanel,
-  SettingsPanel,
-  ComponentTreeWidget,
-} from '@designable/react'
-import {
-  SettingsForm,
-  setNpmCDNRegistry,
-} from '@designable/react-settings-form'
 import {
   createDesigner,
   GlobalRegistry,
-  Shortcut,
   KeyCode,
+  Shortcut,
 } from '@designable/core'
 import {
-  LogoWidget,
-  ActionsWidget,
-  PreviewWidget,
-  SchemaEditorWidget,
-  MarkupSchemaWidget,
-} from './widgets'
-import { saveSchema } from './service'
+  ComponentTreeWidget,
+  CompositePanel,
+  Designer,
+  DesignerToolsWidget,
+  HistoryWidget,
+  OutlineTreeWidget,
+  ResourceWidget,
+  SettingsPanel,
+  StudioPanel,
+  ToolbarPanel,
+  ViewPanel,
+  ViewportPanel,
+  ViewToolsWidget,
+  Workspace,
+  WorkspacePanel,
+} from '@designable/react'
 import {
-  Form,
-  Field,
-  Input,
-  Select,
-  TreeSelect,
+  setNpmCDNRegistry,
+  SettingsForm,
+} from '@designable/react-settings-form'
+import React, { useMemo } from 'react'
+import { createRoot } from 'react-dom/client'
+import {
+  ArrayCards,
+  ArrayTable,
+  Card,
   Cascader,
-  Radio,
   Checkbox,
-  Slider,
-  Rate,
-  NumberPicker,
-  Transfer,
-  Password,
   DatePicker,
-  TimePicker,
-  Upload,
+  Field,
+  Form,
+  FormCollapse,
+  FormGrid,
+  FormLayout,
+  FormTab,
+  Input,
+  NumberPicker,
+  ObjectContainer,
+  Password,
+  Radio,
+  Rate,
+  Select,
+  Slider,
+  Space,
   Switch,
   Text,
-  Card,
-  ArrayCards,
-  ObjectContainer,
-  ArrayTable,
-  Space,
-  FormTab,
-  FormCollapse,
-  FormLayout,
-  FormGrid,
+  TimePicker,
+  Transfer,
+  TreeSelect,
+  Upload,
 } from '../src'
+import { saveSchema } from './service'
+import {
+  ActionsWidget,
+  LogoWidget,
+  MarkupSchemaWidget,
+  PreviewWidget,
+  SchemaEditorWidget,
+} from './widgets'
 
 setNpmCDNRegistry('//unpkg.com')
 
@@ -230,4 +229,9 @@ const App = () => {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+// React 18+ way to render
+const container = document.getElementById('root')
+if (container) {
+  const root = createRoot(container)
+  root.render(<App />)
+}

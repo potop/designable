@@ -1,16 +1,20 @@
-import React, { useMemo } from 'react'
-import { createForm } from '@formily/core'
-import { createSchemaField } from '@formily/react'
+import { TreeNode } from '@designable/core'
+import { transformToSchema } from '@designable/formily-transformer'
 import {
-  Form,
-  FormItem,
-  DatePicker,
-  Checkbox,
+  ArrayCards,
+  ArrayTable,
   Cascader,
+  Checkbox,
+  DatePicker,
   Editable,
+  Form,
+  FormCollapse,
+  FormGrid,
+  FormItem,
+  FormLayout,
+  FormTab,
   Input,
   NumberPicker,
-  Switch,
   Password,
   PreviewText,
   Radio,
@@ -18,20 +22,16 @@ import {
   Select,
   Space,
   Submit,
+  Switch,
   TimePicker,
   Transfer,
   TreeSelect,
   Upload,
-  FormGrid,
-  FormLayout,
-  FormTab,
-  FormCollapse,
-  ArrayTable,
-  ArrayCards,
-} from '@formily/antd'
-import { Card, Slider, Rate } from 'antd'
-import { TreeNode } from '@designable/core'
-import { transformToSchema } from '@designable/formily-transformer'
+} from '@formily/antd-v5'
+import { createForm } from '@formily/core'
+import { createSchemaField } from '@formily/react'
+import { Card, Rate, Slider } from 'antd'
+import React, { useMemo } from 'react'
 
 const Text: React.FC<{
   value?: string

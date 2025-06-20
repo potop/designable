@@ -1,16 +1,16 @@
-import React, { Fragment, useRef, useMemo } from 'react'
-import { FormItem, IFormItemProps } from '@formily/antd'
-import { useField, observer } from '@formily/react'
-import { observable } from '@formily/reactive'
 import { IconWidget, usePrefix } from '@designable/react'
+import { FormItem, IFormItemProps } from '@formily/antd-v5'
+import { observer, useField } from '@formily/react'
+import { observable } from '@formily/reactive'
 import cls from 'classnames'
+import React, { Fragment, PropsWithChildren, useMemo, useRef } from 'react'
 import './styles.less'
 
 const ExpandedMap = new Map<string, boolean>()
 
-export const FoldItem: React.FC<IFormItemProps> & {
-  Base?: React.FC
-  Extra?: React.FC
+export const FoldItem: React.FC<PropsWithChildren<IFormItemProps>> & {
+  Base?: React.FC<PropsWithChildren>
+  Extra?: React.FC<PropsWithChildren>
 } = observer(({ className, style, children, ...props }) => {
   const prefix = usePrefix('fold-item')
   const field = useField()
@@ -22,10 +22,10 @@ export const FoldItem: React.FC<IFormItemProps> & {
   React.Children.forEach(children, (node) => {
     if (React.isValidElement(node)) {
       if (node?.['type']?.['displayName'] === 'FoldItem.Base') {
-        slots.current.base = node['props'].children
+        slots.current.base = (node.props as PropsWithChildren).children
       }
       if (node?.['type']?.['displayName'] === 'FoldItem.Extra') {
-        slots.current.extra = node['props'].children
+        slots.current.extra = (node.props as PropsWithChildren).children
       }
     }
   })

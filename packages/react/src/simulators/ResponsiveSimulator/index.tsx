@@ -1,17 +1,17 @@
-import React, { useRef } from 'react'
-import { observer } from '@formily/reactive-react'
 import {
-  Engine,
-  DragStartEvent,
-  DragMoveEvent,
-  DragStopEvent,
   CursorDragType,
+  DragMoveEvent,
+  DragStartEvent,
+  DragStopEvent,
+  Engine,
 } from '@designable/core'
 import {
   calcSpeedFactor,
   createUniformSpeedAnimation,
 } from '@designable/shared'
-import { useScreen, useDesigner, usePrefix } from '../../hooks'
+import { observer } from '@formily/reactive-react'
+import React, { useRef } from 'react'
+import { useDesigner, usePrefix, useScreen } from '../../hooks'
 import { IconWidget } from '../../widgets'
 import { ResizeHandle, ResizeHandleType } from './handle'
 
@@ -134,8 +134,8 @@ export interface IResponsiveSimulatorProps
 
 export const ResponsiveSimulator: React.FC<IResponsiveSimulatorProps> =
   observer((props) => {
-    const container = useRef<HTMLDivElement>()
-    const content = useRef<HTMLDivElement>()
+    const container = useRef<HTMLDivElement>(null)
+    const content = useRef<HTMLDivElement>(null)
     const prefix = usePrefix('responsive-simulator')
     const screen = useScreen()
     useDesigner((engine) => {

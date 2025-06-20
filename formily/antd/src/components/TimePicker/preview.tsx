@@ -1,10 +1,10 @@
-import React from 'react'
-import { TimePicker as FormilyTimePicker } from '@formily/antd'
 import { createBehavior, createResource } from '@designable/core'
 import { DnFC } from '@designable/react'
-import { createFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
+import { TimePicker as FormilyTimePicker } from '@formily/antd-v5'
+import React from 'react'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
+import { createFieldSchema } from '../Field'
 
 export const TimePicker: DnFC<React.ComponentProps<typeof FormilyTimePicker>> =
   FormilyTimePicker

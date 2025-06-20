@@ -1,12 +1,24 @@
-import React, { useContext, Fragment, useRef, useLayoutEffect } from 'react'
 import { each } from '@designable/shared'
+import cls from 'classnames'
+import React, {
+  Fragment,
+  PropsWithChildren,
+  useContext,
+  useLayoutEffect,
+  useRef,
+} from 'react'
 import { DesignerLayoutContext } from '../context'
 import { IDesignerLayoutProps } from '../types'
-import cls from 'classnames'
 
-export const Layout: React.FC<IDesignerLayoutProps> = (props) => {
+export const Layout: React.FC<PropsWithChildren<IDesignerLayoutProps>> = ({
+  theme = 'light',
+  prefixCls = 'dn-',
+  position = 'fixed',
+  children,
+  ...props
+}) => {
   const layout = useContext(DesignerLayoutContext)
-  const ref = useRef<HTMLDivElement>()
+  const ref = useRef<HTMLDivElement>(null)
 
   useLayoutEffect(() => {
     if (ref.current) {
@@ -17,31 +29,25 @@ export const Layout: React.FC<IDesignerLayoutProps> = (props) => {
   }, [])
 
   if (layout) {
-    return <Fragment>{props.children}</Fragment>
+    return <Fragment>{children}</Fragment>
   }
   return (
     <div
       ref={ref}
       className={cls({
-        [`${props.prefixCls}app`]: true,
-        [`${props.prefixCls}${props.theme}`]: props.theme,
+        [`${prefixCls}app`]: true,
+        [`${prefixCls}${theme}`]: theme,
       })}
     >
       <DesignerLayoutContext.Provider
         value={{
-          theme: props.theme,
-          prefixCls: props.prefixCls,
-          position: props.position,
+          theme: theme,
+          prefixCls: prefixCls,
+          position: position,
         }}
       >
-        {props.children}
+        {children}
       </DesignerLayoutContext.Provider>
     </div>
   )
-}
-
-Layout.defaultProps = {
-  theme: 'light',
-  prefixCls: 'dn-',
-  position: 'fixed',
 }

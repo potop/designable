@@ -1,17 +1,22 @@
-import React, { useEffect, useRef } from 'react'
 import { Engine, GlobalRegistry } from '@designable/core'
+import React, { PropsWithChildren, useEffect, useRef } from 'react'
 import { DesignerEngineContext } from '../context'
+import { useDesigner } from '../hooks'
+import * as icons from '../icons'
 import { IDesignerProps } from '../types'
 import { GhostWidget } from '../widgets'
-import { useDesigner } from '../hooks'
 import { Layout } from './Layout'
-import * as icons from '../icons'
 
 GlobalRegistry.registerDesignerIcons(icons)
 
-export const Designer: React.FC<IDesignerProps> = (props) => {
+export const Designer: React.FC<PropsWithChildren<IDesignerProps>> = ({
+  prefixCls = 'dn-',
+  theme = 'light',
+  children,
+  ...props
+}) => {
   const engine = useDesigner()
-  const ref = useRef<Engine>()
+  const ref = useRef<Engine>(null)
   useEffect(() => {
     if (props.engine) {
       if (props.engine && ref.current) {
@@ -35,16 +40,11 @@ export const Designer: React.FC<IDesignerProps> = (props) => {
     )
 
   return (
-    <Layout {...props}>
+    <Layout prefixCls={prefixCls} theme={theme} {...props}>
       <DesignerEngineContext.Provider value={props.engine}>
-        {props.children}
+        {children}
         <GhostWidget />
       </DesignerEngineContext.Provider>
     </Layout>
   )
-}
-
-Designer.defaultProps = {
-  prefixCls: 'dn-',
-  theme: 'light',
 }

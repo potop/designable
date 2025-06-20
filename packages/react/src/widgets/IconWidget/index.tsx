@@ -1,9 +1,15 @@
-import React, { createContext, useContext, useEffect, useRef } from 'react'
-import { isStr, isFn, isObj, isPlainObj } from '@designable/shared'
+import { isFn, isObj, isPlainObj, isStr } from '@designable/shared'
 import { observer } from '@formily/reactive-react'
 import { Tooltip, TooltipProps } from 'antd'
-import { usePrefix, useRegistry, useTheme } from '../../hooks'
 import cls from 'classnames'
+import React, {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+  useRef,
+} from 'react'
+import { usePrefix, useRegistry, useTheme } from '../../hooks'
 import './styles.less'
 
 const IconContext = createContext<IconProviderProps>(null)
@@ -25,9 +31,9 @@ export interface IIconWidgetProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export const IconWidget: React.FC<IIconWidgetProps> & {
-  Provider?: React.FC<IconProviderProps>
+  Provider?: React.FC<PropsWithChildren<IconProviderProps>>
   ShadowSVG?: React.FC<IShadowSVGProps>
-} = observer((props: React.PropsWithChildren<IIconWidgetProps>) => {
+} = observer((props: PropsWithChildren<IIconWidgetProps>) => {
   const theme = useTheme()
   const context = useContext(IconContext)
   const registry = useRegistry()
@@ -35,7 +41,7 @@ export const IconWidget: React.FC<IIconWidgetProps> & {
   const size = props.size || '1em'
   const height = props.style?.height || size
   const width = props.style?.width || size
-  const takeIcon = (infer: React.ReactNode) => {
+  const takeIcon = (infer: IIconWidgetProps['infer']): React.ReactNode => {
     if (isStr(infer)) {
       const finded = registry.getDesignerIcon(infer)
       if (finded) {
@@ -50,14 +56,18 @@ export const IconWidget: React.FC<IIconWidgetProps> & {
       })
     } else if (React.isValidElement(infer)) {
       if (infer.type === 'svg') {
-        return React.cloneElement(infer, {
-          height,
-          width,
-          fill: 'currentColor',
-          viewBox: infer.props.viewBox || '0 0 1024 1024',
-          focusable: 'false',
-          'aria-hidden': 'true',
-        })
+        const svgProps = infer.props as React.SVGProps<SVGSVGElement>
+        return React.cloneElement(
+          infer as React.ReactElement<React.SVGProps<SVGSVGElement>>,
+          {
+            height,
+            width,
+            fill: 'currentColor',
+            viewBox: svgProps.viewBox || '0 0 1024 1024',
+            focusable: 'false',
+            'aria-hidden': 'true',
+          }
+        )
       } else if (infer.type === 'path' || infer.type === 'g') {
         return (
           <svg
@@ -97,14 +107,14 @@ export const IconWidget: React.FC<IIconWidgetProps> & {
         React.isValidElement(tooltip) || isStr(tooltip)
           ? tooltip
           : tooltip.title
-      const props =
+      const tooltipProps =
         React.isValidElement(tooltip) || isStr(tooltip)
           ? {}
           : isObj(tooltip)
           ? tooltip
           : {}
       return (
-        <Tooltip {...props} title={title}>
+        <Tooltip {...tooltipProps} title={title}>
           {children}
         </Tooltip>
       )
@@ -127,7 +137,7 @@ export const IconWidget: React.FC<IIconWidgetProps> & {
 })
 
 IconWidget.ShadowSVG = (props) => {
-  const ref = useRef<HTMLDivElement>()
+  const ref = useRef<HTMLDivElement>(null)
   const width = isNumSize(props.width) ? `${props.width}px` : props.width
   const height = isNumSize(props.height) ? `${props.height}px` : props.height
   useEffect(() => {
@@ -141,7 +151,7 @@ IconWidget.ShadowSVG = (props) => {
   return <div ref={ref}></div>
 }
 
-IconWidget.Provider = (props) => {
+IconWidget.Provider = (props: PropsWithChildren<IconProviderProps>) => {
   return (
     <IconContext.Provider value={props}>{props.children}</IconContext.Provider>
   )

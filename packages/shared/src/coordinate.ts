@@ -67,6 +67,19 @@ export class Rect implements IRect {
   get bottom() {
     return this.y + this.height
   }
+
+  toJSON() {
+    return {
+      x: this.x,
+      y: this.y,
+      width: this.width,
+      height: this.height,
+      top: this.top,
+      right: this.right,
+      bottom: this.bottom,
+      left: this.left,
+    }
+  }
 }
 
 export class LineSegment {
@@ -587,7 +600,7 @@ export function calcCombineSnapLineSegment(
       ),
       new Point(
         target.start.x,
-        target.end.y > source.end.y ? target.end.y : source.end.y
+        target.end.y > source.end.y ? target.end.y : target.end.y
       )
     )
   }

@@ -1,12 +1,12 @@
-import React from 'react'
 import { TreeNode } from '@designable/core'
 import { observer } from '@formily/reactive-react'
-import { useTreeNode, useNodeIdProps } from '../../hooks'
-import { NodeTitleWidget } from '../NodeTitleWidget'
+import React, { PropsWithChildren } from 'react'
+import { useNodeIdProps, useTreeNode } from '../../hooks'
 import {
-  NodeActionsWidget,
   INodeActionsWidgetActionProps,
+  NodeActionsWidget,
 } from '../NodeActionsWidget'
+import { NodeTitleWidget } from '../NodeTitleWidget'
 import './styles.less'
 
 export interface IDroppableWidgetProps {
@@ -19,15 +19,18 @@ export interface IDroppableWidgetProps {
   hasChildren?: boolean
 }
 
-export const DroppableWidget: React.FC<IDroppableWidgetProps> = observer(
+export const DroppableWidget: React.FC<
+  PropsWithChildren<IDroppableWidgetProps>
+> = observer(
   ({
     node,
     actions,
     height,
-    placeholder,
+    placeholder = true,
     style,
     className,
     hasChildren: hasChildrenProp,
+    children,
     ...props
   }) => {
     const currentNode = useTreeNode()
@@ -37,13 +40,13 @@ export const DroppableWidget: React.FC<IDroppableWidgetProps> = observer(
     return (
       <div {...nodeId} {...props} className={className} style={style}>
         {hasChildren ? (
-          props.children
+          children
         ) : placeholder ? (
           <div style={{ height }} className="dn-droppable-placeholder">
             <NodeTitleWidget node={target} />
           </div>
         ) : (
-          props.children
+          children
         )}
         {actions?.length ? (
           <NodeActionsWidget>
@@ -56,7 +59,3 @@ export const DroppableWidget: React.FC<IDroppableWidgetProps> = observer(
     )
   }
 )
-
-DroppableWidget.defaultProps = {
-  placeholder: true,
-}

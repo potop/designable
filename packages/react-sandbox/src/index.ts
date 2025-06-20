@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from 'react'
-import { isFn, globalThisPolyfill } from '@designable/shared'
 import {
   useDesigner,
-  useWorkspace,
   useLayout,
   usePrefix,
+  useWorkspace,
 } from '@designable/react'
-import ReactDOM from 'react-dom'
+import { globalThisPolyfill, isFn } from '@designable/shared'
+import React, { JSX, useEffect, useRef } from 'react'
+import { createRoot, Root } from 'react-dom/client'
 
 export interface ISandboxProps {
   style?: React.CSSProperties
@@ -16,7 +16,7 @@ export interface ISandboxProps {
 }
 
 export const useSandbox = (props: React.PropsWithChildren<ISandboxProps>) => {
-  const ref = useRef<HTMLIFrameElement>()
+  const ref = useRef<HTMLIFrameElement>(null)
   const appCls = usePrefix('app')
   const designer = useDesigner()
   const workspace = useWorkspace()
@@ -54,7 +54,8 @@ export const useSandbox = (props: React.PropsWithChildren<ISandboxProps>) => {
         </head>
         <style>
           html{
-            overflow: overlay;
+            overflow: auto;
+            scrollbar-gutter: stable;
           }
           ::-webkit-scrollbar {
             width: 5px;
@@ -96,10 +97,17 @@ export const useSandbox = (props: React.PropsWithChildren<ISandboxProps>) => {
   return ref
 }
 
+// Store root instance for cleanup
+let sandboxRoot: Root | null = null
+
 if (globalThisPolyfill.frameElement) {
   //解决iframe内嵌如果iframe被移除，内部React无法回收内存的问题
   globalThisPolyfill.addEventListener('unload', () => {
-    ReactDOM.unmountComponentAtNode(document.getElementById('__SANDBOX_ROOT__'))
+    const rootElement = document.getElementById('__SANDBOX_ROOT__')
+    if (rootElement && sandboxRoot) {
+      sandboxRoot.unmount()
+      sandboxRoot = null
+    }
   })
 }
 
@@ -109,10 +117,13 @@ export const useSandboxScope = () => {
 
 export const renderSandboxContent = (render: (scope?: any) => JSX.Element) => {
   if (isFn(render)) {
-    ReactDOM.render(
-      render(useSandboxScope()),
-      document.getElementById('__SANDBOX_ROOT__')
-    )
+    const rootElement = document.getElementById('__SANDBOX_ROOT__')
+    if (rootElement) {
+      if (!sandboxRoot) {
+        sandboxRoot = createRoot(rootElement)
+      }
+      sandboxRoot.render(render(useSandboxScope()))
+    }
   }
 }
 
