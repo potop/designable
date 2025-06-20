@@ -6,8 +6,7 @@
 
 ## Introduction
 
-If you are worrying about something builder, Such as form builder/table builder/chart builder/app builder etc.
-Designable is your perfect choice.
+It's a fork of the original Designable repository focused on React 19, Ant Design v5 version of a playground
 
 ## Screenshot
 
