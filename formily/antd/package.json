@@ -1,6 +1,6 @@
 {
   "name": "@kdesignable/formily-antd",
-  "version": "1.0.0-beta.66",
+  "version": "1.0.0-beta.67",
   "homepage": "https://github.com/potop/kdesignable#readme",
   "bugs": {
     "url": "https://github.com/potop/kdesignable/issues"
@@ -21,10 +21,10 @@
     "start": "webpack-dev-server --config playground/webpack.dev.ts"
   },
   "dependencies": {
-    "@kdesignable/core": "1.0.0-beta.66",
-    "@kdesignable/formily-setters": "1.0.0-beta.66",
-    "@kdesignable/formily-transformer": "1.0.0-beta.66",
-    "@kdesignable/react": "1.0.0-beta.66"
+    "@kdesignable/core": "1.0.0-beta.67",
+    "@kdesignable/formily-setters": "1.0.0-beta.67",
+    "@kdesignable/formily-transformer": "1.0.0-beta.67",
+    "@kdesignable/react": "1.0.0-beta.67"
   },
   "devDependencies": {
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
@@ -32,7 +32,7 @@
     "@formily/react": "^2.3.7",
     "@formily/reactive": "^2.3.7",
     "@formily/shared": "^2.3.7",
-    "@kdesignable/react-settings-form": "1.0.0-beta.66",
+    "@kdesignable/react-settings-form": "1.0.0-beta.67",
     "@monaco-editor/react": "^4.7.0",
     "autoprefixer": "^9.0",
     "file-loader": "^5.0.2",
