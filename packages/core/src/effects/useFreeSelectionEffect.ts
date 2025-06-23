@@ -1,11 +1,11 @@
-import { DragStopEvent } from '../events'
-import { Engine, CursorType, TreeNode, CursorDragType } from '../models'
 import {
   calcRectByStartEndPoint,
   isCrossRectInRect,
   isRectInRect,
   Point,
-} from '@designable/shared'
+} from '@kdesignable/shared'
+import { DragStopEvent } from '../events'
+import { CursorDragType, CursorType, Engine, TreeNode } from '../models'
 
 export const useFreeSelectionEffect = (engine: Engine) => {
   engine.subscribeTo(DragStopEvent, (event) => {

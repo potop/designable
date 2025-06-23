@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
-import { useTransformHelper, useCursor, usePrefix } from '../../hooks'
 import { observer } from '@formily/reactive-react'
-import { CursorStatus } from '@designable/core'
-import { ILineSegment, calcRectOfAxisLineSegment } from '@designable/shared'
+import { CursorStatus } from '@kdesignable/core'
+import { ILineSegment, calcRectOfAxisLineSegment } from '@kdesignable/shared'
+import React, { Fragment } from 'react'
+import { useCursor, usePrefix, useTransformHelper } from '../../hooks'
 
 export const SpaceBlock = observer(() => {
   const cursor = useCursor()

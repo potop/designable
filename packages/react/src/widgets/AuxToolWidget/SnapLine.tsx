@@ -1,7 +1,7 @@
-import React from 'react'
-import { useTransformHelper, useCursor, usePrefix } from '../../hooks'
 import { observer } from '@formily/reactive-react'
-import { CursorStatus } from '@designable/core'
+import { CursorStatus } from '@kdesignable/core'
+import React from 'react'
+import { useCursor, usePrefix, useTransformHelper } from '../../hooks'
 
 export const SnapLine = observer(() => {
   const cursor = useCursor()

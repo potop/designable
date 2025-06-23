@@ -1,5 +1,5 @@
+import { NodeActionsWidget } from '@kdesignable/react'
 import React from 'react'
-import { NodeActionsWidget } from '@designable/react'
 
 export interface ITemplateAction {
   title: React.ReactNode

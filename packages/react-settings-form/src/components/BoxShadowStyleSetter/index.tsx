@@ -1,11 +1,11 @@
-import React from 'react'
-import { usePrefix } from '@designable/react'
-import { useField, observer } from '@formily/react'
-import { FoldItem } from '../FoldItem'
-import { ColorInput } from '../ColorInput'
-import { SizeInput } from '../SizeInput'
-import { InputItems } from '../InputItems'
+import { observer, useField } from '@formily/react'
+import { usePrefix } from '@kdesignable/react'
 import cls from 'classnames'
+import React from 'react'
+import { ColorInput } from '../ColorInput'
+import { FoldItem } from '../FoldItem'
+import { InputItems } from '../InputItems'
+import { SizeInput } from '../SizeInput'
 
 export interface IBoxShadowStyleSetterProps {
   className?: string

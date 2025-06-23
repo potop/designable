@@ -1,4 +1,4 @@
-import { usePrefix } from '@designable/react'
+import { usePrefix } from '@kdesignable/react'
 import { Input, Popover } from 'antd'
 import React, { useRef } from 'react'
 import { SketchPicker } from 'react-color'

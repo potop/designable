@@ -1,4 +1,4 @@
-import { ICustomEvent } from '@designable/shared'
+import { ICustomEvent } from '@kdesignable/shared'
 import { AbstractCursorEvent } from './AbstractCursorEvent'
 
 export class MouseClickEvent

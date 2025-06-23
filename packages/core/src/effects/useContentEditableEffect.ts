@@ -1,7 +1,7 @@
 import { Path } from '@formily/path'
-import { requestIdle, globalThisPolyfill } from '@designable/shared'
+import { globalThisPolyfill, requestIdle } from '@kdesignable/shared'
+import { MouseClickEvent, MouseDoubleClickEvent } from '../events'
 import { Engine, TreeNode } from '../models'
-import { MouseDoubleClickEvent, MouseClickEvent } from '../events'
 
 type GlobalState = {
   activeElements: Map<HTMLInputElement, TreeNode>

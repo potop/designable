@@ -2,11 +2,11 @@
  * 支持文本、数字、布尔、表达式
  * Todo: JSON、富文本，公式
  */
+import { TextWidget } from '@kdesignable/react'
+import { Button, Input, InputNumber, Popover, Select } from 'antd'
 import React from 'react'
-import { createPolyInput } from '../PolyInput'
-import { Input, Button, Popover, InputNumber, Select } from 'antd'
 import { MonacoInput } from '../MonacoInput'
-import { TextWidget } from '@designable/react'
+import { createPolyInput } from '../PolyInput'
 
 const STARTTAG_REX =
   /<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/

@@ -1,8 +1,8 @@
-import React from 'react'
-import { TreeNode } from '@designable/core'
-import { IconWidget } from '../IconWidget'
-import { usePrefix } from '../../hooks'
+import { TreeNode } from '@kdesignable/core'
 import { Button } from 'antd'
+import React from 'react'
+import { usePrefix } from '../../hooks'
+import { IconWidget } from '../IconWidget'
 
 export interface IDeleteProps {
   node: TreeNode

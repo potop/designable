@@ -1,12 +1,12 @@
-import { Engine, CursorStatus, Viewport } from '../models'
-import { DragMoveEvent, DragStartEvent, DragStopEvent } from '../events'
 import {
   calcAutoScrollBasicInfo,
-  scrollAnimate,
   IAutoScrollBasicInfo,
   IPoint,
   Point,
-} from '@designable/shared'
+  scrollAnimate,
+} from '@kdesignable/shared'
+import { DragMoveEvent, DragStartEvent, DragStopEvent } from '../events'
+import { CursorStatus, Engine, Viewport } from '../models'
 
 export const useAutoScrollEffect = (engine: Engine) => {
   let xScroller: IAutoScrollBasicInfo = null

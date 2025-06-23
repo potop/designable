@@ -1,9 +1,9 @@
+import { Engine, TreeNode } from '@kdesignable/core'
 import { createContext } from 'react'
-import { TreeNode, Engine } from '@designable/core'
 import {
+  IDesignerComponents,
   IDesignerLayoutContext,
   IWorkspaceContext,
-  IDesignerComponents,
 } from './types'
 
 export const DesignerComponentsContext = createContext<IDesignerComponents>({})

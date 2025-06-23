@@ -1,5 +1,5 @@
+import { Engine, IBehavior, IResource } from '@kdesignable/core'
 import React from 'react'
-import { Engine, IResource, IBehavior } from '@designable/core'
 
 export interface IDesignerLayoutProps {
   prefixCls?: string

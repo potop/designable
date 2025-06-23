@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
-import { InputProps } from 'antd/lib/input'
+import { IconWidget, usePrefix } from '@kdesignable/react'
 import { Input, Upload } from 'antd'
-import { usePrefix, IconWidget } from '@designable/react'
-import { SettingsFormContext } from '../../shared/context'
+import { InputProps } from 'antd/lib/input'
 import cls from 'classnames'
+import React, { useContext } from 'react'
+import { SettingsFormContext } from '../../shared/context'
 import './styles.less'
 export interface ImageInputProps extends Omit<InputProps, 'onChange'> {
   value?: string

@@ -1,18 +1,18 @@
-import { isArr } from '@designable/shared'
 import { untracked } from '@formily/reactive'
-import { DEFAULT_DRIVERS, DEFAULT_EFFECTS, DEFAULT_SHORTCUTS } from './presets'
+import { isArr } from '@kdesignable/shared'
+import { mergeLocales } from './internals'
 import { Engine, TreeNode } from './models'
+import { DEFAULT_DRIVERS, DEFAULT_EFFECTS, DEFAULT_SHORTCUTS } from './presets'
 import {
-  IEngineProps,
-  IResourceCreator,
-  IBehaviorCreator,
-  IDesignerLocales,
-  IResource,
   IBehavior,
+  IBehaviorCreator,
   IBehaviorHost,
+  IDesignerLocales,
+  IEngineProps,
+  IResource,
+  IResourceCreator,
   IResourceHost,
 } from './types'
-import { mergeLocales } from './internals'
 
 export const isBehaviorHost = (val: any): val is IBehaviorHost =>
   val?.Behavior && isBehaviorList(val.Behavior)

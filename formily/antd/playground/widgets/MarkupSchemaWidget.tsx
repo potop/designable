@@ -1,6 +1,6 @@
-import { TreeNode } from '@designable/core'
-import { MonacoInput } from '@designable/react-settings-form'
 import { isEmpty, isPlainObj } from '@formily/shared'
+import { TreeNode } from '@kdesignable/core'
+import { MonacoInput } from '@kdesignable/react-settings-form'
 import React from 'react'
 
 export interface IMarkupSchemaWidgetProps {
@@ -17,8 +17,8 @@ const transformToMarkupSchemaCode = (tree: TreeNode) => {
     return `${Object.keys(props)
       .map((key) => {
         if (
-          key === 'x-designable-id' ||
-          key === 'x-designable-source-name' ||
+          key === 'x-kdesignable-id' ||
+          key === 'x-kdesignable-source-name' ||
           key === '_isJSONSchemaObject' ||
           key === 'version' ||
           key === 'type'

@@ -1,14 +1,14 @@
-import { IEventProps, Event } from '@designable/shared'
 import { ISchema } from '@formily/json-schema'
+import { Event, IEventProps } from '@kdesignable/shared'
 import {
   Engine,
   ITreeNode,
   ScreenType,
   Shortcut,
+  TreeNode,
   Viewport,
   Workbench,
   Workspace,
-  TreeNode,
 } from './models'
 
 export type IEngineProps<T = Event> = IEventProps<T> & {

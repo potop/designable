@@ -1,8 +1,8 @@
-import { useState, useEffect, useMemo, useCallback } from 'react'
-import { TreeNode, CursorStatus, CursorDragType } from '@designable/core'
-import { LayoutObserver } from '@designable/shared'
-import { useViewport } from './useViewport'
+import { CursorDragType, CursorStatus, TreeNode } from '@kdesignable/core'
+import { LayoutObserver } from '@kdesignable/shared'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useDesigner } from './useDesigner'
+import { useViewport } from './useViewport'
 
 const isEqualRect = (rect1: DOMRect, rect2: DOMRect) => {
   return (

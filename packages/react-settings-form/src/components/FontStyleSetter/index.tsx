@@ -1,6 +1,6 @@
-import { IconWidget, usePrefix } from '@designable/react'
 import { NumberPicker, Radio, Select } from '@formily/antd-v5'
 import { Field, observer, useField } from '@formily/react'
+import { IconWidget, usePrefix } from '@kdesignable/react'
 import cls from 'classnames'
 import React from 'react'
 import { ColorInput } from '../ColorInput'

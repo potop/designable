@@ -1,6 +1,6 @@
-import { createBehavior, createResource } from '@designable/core'
-import { DnFC } from '@designable/react'
 import { FormLayout as FormilyFormLayout } from '@formily/antd-v5'
+import { createBehavior, createResource } from '@kdesignable/core'
+import { DnFC } from '@kdesignable/react'
 import React from 'react'
 import { withContainer } from '../../common/Container'
 import { AllLocales } from '../../locales'

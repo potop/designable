@@ -1,8 +1,7 @@
-import { EventDriver } from '@designable/shared'
-import { Engine } from '../models/Engine'
-import { ViewportResizeEvent } from '../events'
 import { ResizeObserver } from '@juggle/resize-observer'
-import { globalThisPolyfill } from '@designable/shared'
+import { EventDriver, globalThisPolyfill } from '@kdesignable/shared'
+import { ViewportResizeEvent } from '../events'
+import { Engine } from '../models/Engine'
 
 export class ViewportResizeDriver extends EventDriver<Engine> {
   request = null

@@ -1,7 +1,7 @@
-import { TextWidget, usePrefix, useTheme } from '@designable/react'
 import { Form } from '@formily/core'
 import { observable } from '@formily/reactive'
 import { observer } from '@formily/reactive-react'
+import { TextWidget, usePrefix, useTheme } from '@kdesignable/react'
 import { Button, Modal } from 'antd'
 import cls from 'classnames'
 import React, { Fragment, useMemo, useState } from 'react'

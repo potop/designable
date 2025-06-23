@@ -1,5 +1,5 @@
+import { globalThisPolyfill } from '@kdesignable/shared'
 import { IEngineContext } from '../../types'
-import { globalThisPolyfill } from '@designable/shared'
 
 export interface IViewportEventData {
   scrollX: number

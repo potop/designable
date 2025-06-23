@@ -1,4 +1,4 @@
-import { TreeNode } from '@designable/core'
+import { TreeNode } from '@kdesignable/core'
 import React, { createContext } from 'react'
 
 interface INodeContext {

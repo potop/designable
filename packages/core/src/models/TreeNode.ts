@@ -1,5 +1,5 @@
-import { each, isFn, uid } from '@designable/shared'
 import { action, define, observable, toJS } from '@formily/reactive'
+import { each, isFn, uid } from '@kdesignable/shared'
 import {
   AppendNodeEvent,
   CloneNodeEvent,

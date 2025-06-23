@@ -1,21 +1,21 @@
-import React, { Fragment, useState } from 'react'
 import { observer } from '@formily/react'
-import { Tabs } from 'antd'
-import { TabsProps, TabPaneProps } from 'antd/lib/tabs'
-import { TreeNode, createBehavior, createResource } from '@designable/core'
+import { TreeNode, createBehavior, createResource } from '@kdesignable/core'
 import {
+  DnFC,
+  DroppableWidget,
+  TreeNodeWidget,
   useNodeIdProps,
   useTreeNode,
-  TreeNodeWidget,
-  DroppableWidget,
-  DnFC,
-} from '@designable/react'
+} from '@kdesignable/react'
+import { Tabs } from 'antd'
+import { TabPaneProps, TabsProps } from 'antd/lib/tabs'
+import React, { Fragment, useState } from 'react'
 import { LoadTemplate } from '../../common/LoadTemplate'
 import { useDropTemplate } from '../../hooks'
-import { createVoidFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
 import { matchComponent } from '../../shared'
+import { createVoidFieldSchema } from '../Field'
 
 const parseTabs = (parent: TreeNode) => {
   const tabs: TreeNode[] = []

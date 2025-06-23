@@ -1,5 +1,5 @@
-import { Viewport as ViewportType } from '@designable/core'
-import { globalThisPolyfill, requestIdle } from '@designable/shared'
+import { Viewport as ViewportType } from '@kdesignable/core'
+import { globalThisPolyfill, requestIdle } from '@kdesignable/shared'
 import cls from 'classnames'
 import React, { useLayoutEffect, useRef, useState } from 'react'
 import { usePrefix, useViewport } from '../hooks'

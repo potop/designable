@@ -1,5 +1,5 @@
-import { GlobalRegistry } from '@designable/core'
 import { ISchema } from '@formily/react'
+import { GlobalRegistry } from '@kdesignable/core'
 
 export const Card: ISchema & { Addition?: ISchema } = {
   type: 'object',

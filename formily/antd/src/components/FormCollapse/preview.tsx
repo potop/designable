@@ -1,22 +1,22 @@
-import React, { Fragment, useState } from 'react'
 import { observer } from '@formily/react'
-import { Collapse } from 'antd'
-import { CollapseProps, CollapsePanelProps } from 'antd/lib/collapse'
-import { TreeNode, createBehavior, createResource } from '@designable/core'
+import { toArr } from '@formily/shared'
+import { TreeNode, createBehavior, createResource } from '@kdesignable/core'
 import {
-  useTreeNode,
-  useNodeIdProps,
+  DnFC,
   DroppableWidget,
   TreeNodeWidget,
-  DnFC,
-} from '@designable/react'
-import { toArr } from '@formily/shared'
+  useNodeIdProps,
+  useTreeNode,
+} from '@kdesignable/react'
+import { Collapse } from 'antd'
+import { CollapsePanelProps, CollapseProps } from 'antd/lib/collapse'
+import React, { Fragment, useState } from 'react'
 import { LoadTemplate } from '../../common/LoadTemplate'
 import { useDropTemplate } from '../../hooks'
-import { createVoidFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
 import { matchComponent } from '../../shared'
+import { createVoidFieldSchema } from '../Field'
 
 const parseCollapse = (parent: TreeNode) => {
   const tabs: TreeNode[] = []

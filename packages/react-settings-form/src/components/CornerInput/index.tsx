@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { usePrefix } from '@designable/react'
+import { usePrefix } from '@kdesignable/react'
 import cls from 'classnames'
+import React, { useEffect, useState } from 'react'
 import './styles.less'
 
 export interface ICornerInputProps {

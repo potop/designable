@@ -1,13 +1,13 @@
 {
-  "name": "@designable/formily-setters",
+  "name": "@kdesignable/formily-setters",
   "version": "1.0.0-beta.65",
-  "homepage": "https://github.com/alibaba/designable#readme",
+  "homepage": "https://github.com/potop/kdesignable#readme",
   "bugs": {
-    "url": "https://github.com/alibaba/designable/issues"
+    "url": "https://github.com/potop/kdesignable/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alibaba/designable.git"
+    "url": "git+https://github.com/potop/kdesignable.git"
   },
   "license": "MIT",
   "main": "lib",
@@ -20,10 +20,10 @@
     "start": "webpack-dev-server --config playground/webpack.dev.ts"
   },
   "dependencies": {
-    "@designable/core": "1.0.0-beta.65",
-    "@designable/formily-transformer": "1.0.0-beta.65",
-    "@designable/react": "1.0.0-beta.65",
-    "@designable/react-settings-form": "1.0.0-beta.65"
+    "@kdesignable/core": "1.0.0-beta.65",
+    "@kdesignable/formily-transformer": "1.0.0-beta.65",
+    "@kdesignable/react": "1.0.0-beta.65",
+    "@kdesignable/react-settings-form": "1.0.0-beta.65"
   },
   "devDependencies": {
     "@ant-design/v5-patch-for-react-19": "^1.0.3",

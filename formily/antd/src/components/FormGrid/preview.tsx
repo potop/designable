@@ -1,12 +1,12 @@
-import { TreeNode, createBehavior, createResource } from '@designable/core'
+import { FormGrid as FormilyGird } from '@formily/antd-v5'
+import { observer } from '@formily/reactive-react'
+import { TreeNode, createBehavior, createResource } from '@kdesignable/core'
 import {
   DnFC,
   DroppableWidget,
   useNodeIdProps,
   useTreeNode,
-} from '@designable/react'
-import { FormGrid as FormilyGird } from '@formily/antd-v5'
-import { observer } from '@formily/reactive-react'
+} from '@kdesignable/react'
 import React, { PropsWithChildren } from 'react'
 import { LoadTemplate } from '../../common/LoadTemplate'
 import { AllLocales } from '../../locales'

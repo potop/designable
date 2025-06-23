@@ -1,11 +1,3 @@
-import { createBehavior } from '@designable/core'
-import {
-  DnFC,
-  useComponents,
-  useDesigner,
-  useTreeNode,
-} from '@designable/react'
-import { isArr, isStr } from '@designable/shared'
 import { FormItem } from '@formily/antd-v5'
 import { FormPath } from '@formily/core'
 import {
@@ -19,6 +11,14 @@ import {
 } from '@formily/react'
 import { toJS } from '@formily/reactive'
 import { each, reduce } from '@formily/shared'
+import { createBehavior } from '@kdesignable/core'
+import {
+  DnFC,
+  useComponents,
+  useDesigner,
+  useTreeNode,
+} from '@kdesignable/react'
+import { isArr, isStr } from '@kdesignable/shared'
 import React from 'react'
 import { Container } from '../../common/Container'
 import { AllLocales } from '../../locales'

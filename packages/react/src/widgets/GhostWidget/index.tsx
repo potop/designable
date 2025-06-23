@@ -1,6 +1,6 @@
-import { CursorStatus } from '@designable/core'
 import { autorun } from '@formily/reactive'
 import { observer } from '@formily/reactive-react'
+import { CursorStatus } from '@kdesignable/core'
 import React, { useEffect, useRef } from 'react'
 import { useCursor, useDesigner, usePrefix } from '../../hooks'
 import { NodeTitleWidget } from '../NodeTitleWidget'

@@ -1,5 +1,5 @@
-import { TreeNode } from '@designable/core'
 import { reaction } from '@formily/reactive'
+import { TreeNode } from '@kdesignable/core'
 import cls from 'classnames'
 import React, { useLayoutEffect, useRef, useState } from 'react'
 import { usePrefix, useViewport } from '../../hooks'

@@ -1,7 +1,7 @@
-import React from 'react'
-import { ScreenType } from '@designable/core'
-import { requestIdle } from '@designable/shared'
 import { observer } from '@formily/reactive-react'
+import { ScreenType } from '@kdesignable/core'
+import { requestIdle } from '@kdesignable/shared'
+import React from 'react'
 import { useScreen } from '../hooks'
 import {
   MobileSimulator,

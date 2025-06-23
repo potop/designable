@@ -3,7 +3,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alibaba/designable.git"
+    "url": "git+https://github.com/potop/kdesignable.git"
   },
   "workspaces": [
     "packages/*",
@@ -22,9 +22,7 @@
     "release:force": "lerna publish from-package --yes",
     "release:github": "ts-node scripts/release release",
     "start": "dumi dev",
-    "start:basic": "yarn workspace @designable/basic-example start",
-    "start:playground": "npm run start:basic",
-    "start:sandbox": "yarn workspace @designable/sandbox-example start",
+    "start:antd": "yarn workspace @kdesignable/formily-antd start",
     "test": "jest --coverage",
     "test:prod": "jest --coverage --silent",
     "test:watch": "jest --watch",

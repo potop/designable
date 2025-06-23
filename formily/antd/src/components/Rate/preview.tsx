@@ -1,10 +1,10 @@
-import React from 'react'
+import { createBehavior, createResource } from '@kdesignable/core'
+import { DnFC } from '@kdesignable/react'
 import { Rate as AntdRate } from 'antd'
-import { createBehavior, createResource } from '@designable/core'
-import { DnFC } from '@designable/react'
-import { createFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
+import React from 'react'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
+import { createFieldSchema } from '../Field'
 
 export const Rate: DnFC<React.ComponentProps<typeof AntdRate>> = AntdRate
 

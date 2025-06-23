@@ -1,10 +1,10 @@
-import React from 'react'
+import { ITreeNode, TreeNode } from '@kdesignable/core'
 import {
   transformToSchema,
   transformToTreeNode,
-} from '@designable/formily-transformer'
-import { TreeNode, ITreeNode } from '@designable/core'
-import { MonacoInput } from '@designable/react-settings-form'
+} from '@kdesignable/formily-transformer'
+import { MonacoInput } from '@kdesignable/react-settings-form'
+import React from 'react'
 
 export interface ISchemaEditorWidgetProps {
   tree: TreeNode

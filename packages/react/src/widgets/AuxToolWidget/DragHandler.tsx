@@ -1,9 +1,9 @@
-import React from 'react'
-import { TreeNode } from '@designable/core'
 import { observer } from '@formily/reactive-react'
-import { IconWidget } from '../IconWidget'
-import { useDesigner, usePrefix } from '../../hooks'
+import { TreeNode } from '@kdesignable/core'
 import { Button } from 'antd'
+import React from 'react'
+import { useDesigner, usePrefix } from '../../hooks'
+import { IconWidget } from '../IconWidget'
 
 export interface IDragHandlerProps {
   node: TreeNode

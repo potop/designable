@@ -1,7 +1,3 @@
-import { GlobalRegistry } from '@designable/core'
-import { TextWidget, usePrefix } from '@designable/react'
-import { MonacoInput } from '@designable/react-settings-form'
-import { requestIdle } from '@designable/shared'
 import {
   ArrayTable,
   Form,
@@ -13,6 +9,10 @@ import {
 import { createForm, isVoidField } from '@formily/core'
 import { createSchemaField } from '@formily/react'
 import { clone, uid } from '@formily/shared'
+import { GlobalRegistry } from '@kdesignable/core'
+import { TextWidget, usePrefix } from '@kdesignable/react'
+import { MonacoInput } from '@kdesignable/react-settings-form'
+import { requestIdle } from '@kdesignable/shared'
 import { Button, Card, Modal, Tag, Tooltip } from 'antd'
 import React, { useEffect, useMemo, useState } from 'react'
 import { initDeclaration } from './declarations'

@@ -1,13 +1,13 @@
-import { TreeNode, createResource } from '@designable/core'
+import { ArrayBase } from '@formily/antd-v5'
+import { observer } from '@formily/react'
+import { TreeNode, createResource } from '@kdesignable/core'
 import {
   DnFC,
   DroppableWidget,
   TreeNodeWidget,
   useNodeIdProps,
   useTreeNode,
-} from '@designable/react'
-import { ArrayBase } from '@formily/antd-v5'
-import { observer } from '@formily/react'
+} from '@kdesignable/react'
 import { Card, CardProps } from 'antd'
 import cls from 'classnames'
 import React, { Fragment } from 'react'

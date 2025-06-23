@@ -1,8 +1,8 @@
-import { createBehavior, createResource } from '@designable/core'
-import { DnFC, usePrefix } from '@designable/react'
 import { Form as FormilyForm } from '@formily/antd-v5'
 import { createForm } from '@formily/core'
 import { observer } from '@formily/react'
+import { createBehavior, createResource } from '@kdesignable/core'
+import { DnFC, usePrefix } from '@kdesignable/react'
 import React, { useMemo } from 'react'
 import { AllLocales } from '../../locales'
 import { AllSchemas } from '../../schemas'
@@ -57,7 +57,7 @@ Form.Behavior = createBehavior({
 })
 
 Form.Resource = createResource({
-  title: { 'zh-CN': '表单', 'en-US': 'Form' },
+  title: { 'en-US': 'Form' },
   icon: 'FormLayoutSource',
   elements: [
     {

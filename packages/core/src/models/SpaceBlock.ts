@@ -1,9 +1,9 @@
 import {
-  calcExtendsLineSegmentOfRect,
   calcDistanceOfSnapLineToEdges,
+  calcExtendsLineSegmentOfRect,
   LineSegment,
   Rect,
-} from '@designable/shared'
+} from '@kdesignable/shared'
 import { SnapLine } from './SnapLine'
 import { TransformHelper } from './TransformHelper'
 import { TreeNode } from './TreeNode'

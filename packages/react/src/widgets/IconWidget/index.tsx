@@ -1,5 +1,5 @@
-import { isFn, isObj, isPlainObj, isStr } from '@designable/shared'
 import { observer } from '@formily/reactive-react'
+import { isFn, isObj, isPlainObj, isStr } from '@kdesignable/shared'
 import { Tooltip, TooltipProps } from 'antd'
 import cls from 'classnames'
 import React, {

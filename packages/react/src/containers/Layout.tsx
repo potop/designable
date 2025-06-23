@@ -1,4 +1,4 @@
-import { each } from '@designable/shared'
+import { each } from '@kdesignable/shared'
 import cls from 'classnames'
 import React, {
   Fragment,

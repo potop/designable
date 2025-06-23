@@ -1,7 +1,7 @@
+import { TreeNode } from '@kdesignable/core'
+import { useSelectedNode } from '@kdesignable/react'
+import { TreeSelect, TreeSelectProps } from 'antd'
 import React from 'react'
-import { TreeNode } from '@designable/core'
-import { useSelectedNode } from '@designable/react'
-import { TreeSelectProps, TreeSelect } from 'antd'
 
 export interface IPathSelectorProps
   extends Omit<TreeSelectProps<any>, 'onChange'> {

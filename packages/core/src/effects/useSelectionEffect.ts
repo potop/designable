@@ -1,6 +1,6 @@
-import { Engine, CursorStatus } from '../models'
+import { KeyCode, Point } from '@kdesignable/shared'
 import { MouseClickEvent } from '../events'
-import { KeyCode, Point } from '@designable/shared'
+import { CursorStatus, Engine } from '../models'
 
 export const useSelectionEffect = (engine: Engine) => {
   engine.subscribeTo(MouseClickEvent, (event) => {

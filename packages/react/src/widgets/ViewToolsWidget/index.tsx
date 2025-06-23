@@ -1,5 +1,5 @@
-import { WorkbenchTypes } from '@designable/core'
 import { observer } from '@formily/reactive-react'
+import { WorkbenchTypes } from '@kdesignable/core'
 import { Button, Space } from 'antd'
 import cls from 'classnames'
 import React from 'react'

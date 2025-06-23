@@ -1,9 +1,9 @@
-import React from 'react'
-import { useCursor, usePrefix, useViewport, useOperation } from '../../hooks'
 import { observer } from '@formily/reactive-react'
-import { CursorDragType, CursorStatus } from '@designable/core'
-import { calcRectByStartEndPoint } from '@designable/shared'
+import { CursorDragType, CursorStatus } from '@kdesignable/core'
+import { calcRectByStartEndPoint } from '@kdesignable/shared'
 import cls from 'classnames'
+import React from 'react'
+import { useCursor, useOperation, usePrefix, useViewport } from '../../hooks'
 
 export const FreeSelection = observer(() => {
   const cursor = useCursor()

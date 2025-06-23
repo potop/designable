@@ -1,3 +1,3 @@
 import baseConfig from '../../scripts/rollup.base.js'
 
-export default baseConfig('designable.shared', 'Designable.Shared')
+export default baseConfig('kdesignable.shared', 'Designable.Shared')

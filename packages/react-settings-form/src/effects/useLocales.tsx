@@ -1,8 +1,8 @@
-import React from 'react'
 import { isVoidField, onFieldReact } from '@formily/core'
-import { TreeNode, GlobalRegistry } from '@designable/core'
-import { isStr } from '@designable/shared'
-import { IconWidget } from '@designable/react'
+import { GlobalRegistry, TreeNode } from '@kdesignable/core'
+import { IconWidget } from '@kdesignable/react'
+import { isStr } from '@kdesignable/shared'
+import React from 'react'
 
 const takeIcon = (message: string) => {
   if (!isStr(message)) return

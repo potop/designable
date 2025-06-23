@@ -1,5 +1,3 @@
-import { TreeNode } from '@designable/core'
-import { transformToSchema } from '@designable/formily-transformer'
 import {
   ArrayCards,
   ArrayTable,
@@ -30,6 +28,8 @@ import {
 } from '@formily/antd-v5'
 import { createForm } from '@formily/core'
 import { createSchemaField } from '@formily/react'
+import { TreeNode } from '@kdesignable/core'
+import { transformToSchema } from '@kdesignable/formily-transformer'
 import { Card, Rate, Slider } from 'antd'
 import React, { useMemo } from 'react'
 

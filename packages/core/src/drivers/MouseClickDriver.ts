@@ -1,6 +1,6 @@
-import { EventDriver } from '@designable/shared'
-import { Engine } from '../models/Engine'
+import { EventDriver } from '@kdesignable/shared'
 import { MouseClickEvent, MouseDoubleClickEvent } from '../events'
+import { Engine } from '../models/Engine'
 
 export class MouseClickDriver extends EventDriver<Engine> {
   onMouseClick = (e: MouseEvent) => {

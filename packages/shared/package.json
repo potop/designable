@@ -1,13 +1,13 @@
 {
-  "name": "@designable/shared",
+  "name": "@kdesignable/shared",
   "version": "1.0.0-beta.65",
-  "homepage": "https://github.com/alibaba/designable#readme",
+  "homepage": "https://github.com/potop/kdesignable#readme",
   "bugs": {
-    "url": "https://github.com/alibaba/designable/issues"
+    "url": "https://github.com/potop/kdesignable/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alibaba/designable.git"
+    "url": "git+https://github.com/potop/kdesignable.git"
   },
   "license": "MIT",
   "main": "lib",

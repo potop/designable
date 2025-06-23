@@ -3,8 +3,8 @@ import {
   useLayout,
   usePrefix,
   useWorkspace,
-} from '@designable/react'
-import { globalThisPolyfill, isFn } from '@designable/shared'
+} from '@kdesignable/react'
+import { globalThisPolyfill, isFn } from '@kdesignable/shared'
 import React, { JSX, useEffect, useRef } from 'react'
 import { createRoot, Root } from 'react-dom/client'
 

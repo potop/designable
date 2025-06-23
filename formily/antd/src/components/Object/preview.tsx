@@ -1,9 +1,9 @@
+import { createBehavior, createResource } from '@kdesignable/core'
+import { DnFC } from '@kdesignable/react'
 import React from 'react'
-import { createBehavior, createResource } from '@designable/core'
-import { DnFC } from '@designable/react'
-import { createFieldSchema } from '../Field'
 import { Container } from '../../common/Container'
 import { AllLocales } from '../../locales'
+import { createFieldSchema } from '../Field'
 
 export const ObjectContainer: DnFC<React.ComponentProps<typeof Container>> =
   Container

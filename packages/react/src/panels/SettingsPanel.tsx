@@ -1,5 +1,5 @@
-import { requestIdle } from '@designable/shared'
 import { observer } from '@formily/reactive-react'
+import { requestIdle } from '@kdesignable/shared'
 import cls from 'classnames'
 import React, { PropsWithChildren, useEffect, useState } from 'react'
 import { usePrefix, useWorkbench } from '../hooks'

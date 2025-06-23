@@ -1,6 +1,6 @@
-import { EventDriver } from '@designable/shared'
+import { EventDriver } from '@kdesignable/shared'
+import { DragMoveEvent, DragStartEvent, DragStopEvent } from '../events'
 import { Engine } from '../models/Engine'
-import { DragStartEvent, DragMoveEvent, DragStopEvent } from '../events'
 
 const GlobalState = {
   dragging: false,

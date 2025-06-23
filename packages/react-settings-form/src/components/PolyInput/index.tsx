@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { IconWidget, usePrefix } from '@kdesignable/react'
 import { Button } from 'antd'
-import { usePrefix, IconWidget } from '@designable/react'
 import cls from 'classnames'
+import React, { useEffect, useRef, useState } from 'react'
 import './styles.less'
 
 export interface IInput {

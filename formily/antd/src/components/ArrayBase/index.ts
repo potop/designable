@@ -1,7 +1,7 @@
-import { createBehavior } from '@designable/core'
-import { createFieldSchema, createVoidFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
+import { createBehavior } from '@kdesignable/core'
 import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
+import { createFieldSchema, createVoidFieldSchema } from '../Field'
 
 export const createArrayBehavior = (name: string) => {
   return createBehavior(

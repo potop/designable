@@ -1,7 +1,7 @@
-import { GlobalRegistry } from '@designable/core'
-import icons from './icons'
-import panels from './panels'
+import { GlobalRegistry } from '@kdesignable/core'
 import global from './global'
+import icons from './icons'
 import operations from './operations'
+import panels from './panels'
 
 GlobalRegistry.registerDesignerLocales(icons, panels, global, operations)

@@ -1,11 +1,11 @@
-import typescript from 'rollup-plugin-typescript2'
-import resolve from 'rollup-plugin-node-resolve'
-import postcss from 'rollup-plugin-postcss'
 import commonjs from '@rollup/plugin-commonjs'
 import NpmImport from 'less-plugin-npm-import'
-import externalGlobals from 'rollup-plugin-external-globals'
-import { terser } from 'rollup-plugin-terser'
 import path from 'path'
+import externalGlobals from 'rollup-plugin-external-globals'
+import resolve from 'rollup-plugin-node-resolve'
+import postcss from 'rollup-plugin-postcss'
+import { terser } from 'rollup-plugin-terser'
+import typescript from 'rollup-plugin-typescript2'
 
 const presets = () => {
   const externals = {
@@ -28,11 +28,11 @@ const presets = () => {
     '@formily/core': 'Formily.Core',
     '@formily/json-schema': 'Formily.JSONSchema',
     '@formily/react': 'Formily.React',
-    '@designable/shared': 'Designable.Shared',
-    '@designable/core': 'Designable.Core',
-    '@designable/react': 'Designable.React',
-    '@designable/react-sandbox': 'Designable.ReactSandbox',
-    '@designable/react-settings-form': 'Designable.ReactSettingsForm',
+    '@kdesignable/shared': 'Designable.Shared',
+    '@kdesignable/core': 'Designable.Core',
+    '@kdesignable/react': 'Designable.React',
+    '@kdesignable/react-sandbox': 'Designable.ReactSandbox',
+    '@kdesignable/react-settings-form': 'Designable.ReactSettingsForm',
   }
   return [
     typescript({

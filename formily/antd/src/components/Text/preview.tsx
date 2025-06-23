@@ -1,10 +1,10 @@
-import React from 'react'
-import { createBehavior, createResource } from '@designable/core'
-import { DnFC } from '@designable/react'
-import { createVoidFieldSchema } from '../Field'
-import { AllSchemas } from '../../schemas'
-import { AllLocales } from '../../locales'
+import { createBehavior, createResource } from '@kdesignable/core'
+import { DnFC } from '@kdesignable/react'
 import cls from 'classnames'
+import React from 'react'
+import { AllLocales } from '../../locales'
+import { AllSchemas } from '../../schemas'
+import { createVoidFieldSchema } from '../Field'
 import './styles.less'
 
 export interface IDesignableTextProps {

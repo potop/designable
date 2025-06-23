@@ -3,7 +3,7 @@ import {
   GlobalRegistry,
   KeyCode,
   Shortcut,
-} from '@designable/core'
+} from '@kdesignable/core'
 import {
   ComponentTreeWidget,
   CompositePanel,
@@ -20,11 +20,11 @@ import {
   ViewToolsWidget,
   Workspace,
   WorkspacePanel,
-} from '@designable/react'
+} from '@kdesignable/react'
 import {
   setNpmCDNRegistry,
   SettingsForm,
-} from '@designable/react-settings-form'
+} from '@kdesignable/react-settings-form'
 import React, { useMemo } from 'react'
 import { createRoot } from 'react-dom/client'
 import {
@@ -68,28 +68,12 @@ import {
 setNpmCDNRegistry('//unpkg.com')
 
 GlobalRegistry.registerDesignerLocales({
-  'zh-CN': {
-    sources: {
-      Inputs: '输入控件',
-      Layouts: '布局组件',
-      Arrays: '自增组件',
-      Displays: '展示组件',
-    },
-  },
   'en-US': {
     sources: {
       Inputs: 'Inputs',
       Layouts: 'Layouts',
       Arrays: 'Arrays',
       Displays: 'Displays',
-    },
-  },
-  'ko-KR': {
-    sources: {
-      Inputs: '입력',
-      Layouts: '레이아웃',
-      Arrays: '배열',
-      Displays: '디스플레이',
     },
   },
 })

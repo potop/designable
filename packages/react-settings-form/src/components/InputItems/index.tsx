@@ -1,4 +1,4 @@
-import { IconWidget, usePrefix } from '@designable/react'
+import { IconWidget, usePrefix } from '@kdesignable/react'
 import cls from 'classnames'
 import React, { PropsWithChildren, useContext } from 'react'
 import './styles.less'
