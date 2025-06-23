@@ -1,6 +1,6 @@
 {
   "name": "@kdesignable/react-sandbox",
-  "version": "1.0.0-beta.65",
+  "version": "1.0.0-beta.66",
   "homepage": "https://github.com/potop/kdesignable#readme",
   "bugs": {
     "url": "https://github.com/potop/kdesignable/issues"
@@ -20,8 +20,8 @@
     "build:umd": "rollup --config"
   },
   "dependencies": {
-    "@kdesignable/react": "1.0.0-beta.65",
-    "@kdesignable/shared": "1.0.0-beta.65"
+    "@kdesignable/react": "1.0.0-beta.66",
+    "@kdesignable/shared": "1.0.0-beta.66"
   },
   "peerDependencies": {
     "react": "18.x || 19.x "
