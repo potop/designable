@@ -1,23 +1,23 @@
-import ghRelease from 'gh-release'
 import fs from 'fs-extra'
-import path from 'path'
+import ghRelease from 'gh-release'
 import moment from 'moment'
+import path from 'path'
 import { compareTwoStrings } from 'string-similarity'
 import {
-  listCommits,
-  lastTag,
-  getPreviousTag,
   getCurrentBranch,
   getGithubToken,
+  getPreviousTag,
   getSortableAllTags,
   getTaggedTime,
+  lastTag,
+  listCommits,
 } from './git'
 
 const LernaJSON = fs.readJSONSync(path.resolve(__dirname, '../../lerna.json'))
 
 const ReleaseTitle = 'Designable Release 🚀'
 
-const GithubRepo = 'https://github.com/alibaba/designable'
+const GithubRepo = 'https://github.com/potop/kdesignable'
 
 const CommitGroupBy: Array<[string, string[]]> = [
   [':tada: Enhancements', ['feat', 'features', 'feature']],
