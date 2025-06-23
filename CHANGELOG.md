@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.0-beta.67(2025-06-24)
+
+### No Change Log
+
 ## v1.0.0-beta.66(2025-06-23)
 
 ### :blush: Other Changes
