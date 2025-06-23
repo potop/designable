@@ -1,5 +1,4 @@
 import commonjs from '@rollup/plugin-commonjs'
-import NpmImport from 'less-plugin-npm-import'
 import path from 'path'
 import externalGlobals from 'rollup-plugin-external-globals'
 import resolve from 'rollup-plugin-node-resolve'
@@ -14,7 +13,6 @@ const presets = () => {
     react: 'React',
     moment: 'moment',
     'react-is': 'ReactIs',
-    '@alifd/next': 'Next',
     'mobx-react-lite': 'mobxReactLite',
     'react-dom': 'ReactDOM',
     '@ant-design/icons': 'icons',
@@ -51,7 +49,6 @@ const presets = () => {
       // extensions: ['.css', '.less', '.sass'],
       use: {
         less: {
-          plugins: [new NpmImport({ prefix: '~' })],
           javascriptEnabled: true,
         },
         sass: {},

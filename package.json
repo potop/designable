@@ -119,7 +119,6 @@
     "lerna": "^4.0.0",
     "less": "^4.1.1",
     "less-loader": "^5.0.0",
-    "less-plugin-npm-import": "^2.1.0",
     "lint-staged": "^8.2.1",
     "mobx": "^6.13.7",
     "mobx-react-lite": "^4.1.0",
