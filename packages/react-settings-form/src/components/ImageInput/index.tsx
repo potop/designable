@@ -21,6 +21,7 @@ export const ImageInput: React.FC<ImageInputProps> = ({
     <div className={cls(prefix, className)} style={style}>
       <Input
         {...props}
+        value={props.value === null ? undefined : props.value}
         onChange={(e) => {
           props.onChange?.(e?.target?.['value'])
         }}

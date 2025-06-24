@@ -16,7 +16,7 @@ export const ColorInput: React.FC<IColorInputProps> = (props) => {
   return (
     <div ref={container} className={prefix}>
       <Input
-        value={props.value}
+        value={props.value === null ? undefined : props.value}
         onChange={(e) => {
           props.onChange?.(e.target.value)
         }}

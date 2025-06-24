@@ -87,6 +87,7 @@ export const ValueInput = createPolyInput([
     component: (props: any) => (
       <Select
         {...props}
+        value={props.value === null ? undefined : props.value}
         options={[
           { label: 'True', value: true },
           { label: 'False', value: false },

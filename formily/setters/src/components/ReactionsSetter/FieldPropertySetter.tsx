@@ -47,6 +47,25 @@ export const FieldPropertySetter: React.FC<IFieldPropertySetterProps> = (
     (item) => item.key === selectKeys[0]
   )
 
+  const items = FieldProperties.map((key) => {
+    if (isPlainObj(key)) {
+      return {
+        key: key.key,
+        label: (
+          <TextWidget
+            token={`SettingComponents.ReactionsSetter.${key.token || key.key}`}
+          />
+        ),
+      }
+    }
+    return {
+      key: key as string,
+      label: (
+        <TextWidget token={`SettingComponents.ReactionsSetter.${key}`} />
+      ),
+    }
+  })
+
   return (
     <div className={prefix}>
       <Menu
@@ -63,26 +82,8 @@ export const FieldPropertySetter: React.FC<IFieldPropertySetterProps> = (
         onSelect={({ selectedKeys }) => {
           setSelectKeys(selectedKeys)
         }}
-      >
-        {FieldProperties.map((key) => {
-          if (isPlainObj(key)) {
-            return (
-              <Menu.Item key={key.key}>
-                <TextWidget
-                  token={`SettingComponents.ReactionsSetter.${
-                    key.token || key.key
-                  }`}
-                />
-              </Menu.Item>
-            )
-          }
-          return (
-            <Menu.Item key={key}>
-              <TextWidget token={`SettingComponents.ReactionsSetter.${key}`} />
-            </Menu.Item>
-          )
-        })}
-      </Menu>
+        items={items}
+      />
       <div className={prefix + '-coder-wrapper'}>
         <div className={prefix + '-coder-start'}>
           {`$self.${selectKeys[0]} = (`}
