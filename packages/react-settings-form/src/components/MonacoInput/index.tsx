@@ -9,7 +9,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './config'
 import { initMonaco } from './config'
 import { format } from './format'
-import './styles.less'
+import './styles.scss'
 
 export type Monaco = typeof monaco
 export interface MonacoInputProps extends EditorProps {

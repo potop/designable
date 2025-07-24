@@ -2,7 +2,7 @@ import { usePrefix } from '@kdesignable/react'
 import { Input, Popover } from 'antd'
 import React, { useRef } from 'react'
 import { SketchPicker } from 'react-color'
-import './styles.less'
+import './styles.scss'
 
 export interface IColorInputProps {
   value?: string

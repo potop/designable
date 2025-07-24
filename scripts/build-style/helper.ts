@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { OutputOptions, rollup, RollupOptions } from 'rollup'
-import postcss from 'rollup-plugin-postcss'
-import NpmImport from 'less-plugin-npm-import'
 import resolve from 'rollup-plugin-node-resolve'
+import postcss from 'rollup-plugin-postcss'
 
 export const getRollupBasePlugin = () => [
   resolve(),
@@ -10,10 +9,10 @@ export const getRollupBasePlugin = () => [
     extract: true,
     minimize: true,
     sourceMap: true,
-    // extensions: ['.css', '.less', '.sass'],
+    // extensions: ['.css', '.scss', '.sass'],
     use: {
       less: {
-        plugins: [new NpmImport({ prefix: '~' })],
+        plugins: [],
         javascriptEnabled: true,
       },
       sass: {},

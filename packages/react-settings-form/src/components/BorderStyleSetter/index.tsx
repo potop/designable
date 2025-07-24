@@ -10,7 +10,7 @@ import { ColorInput } from '../ColorInput'
 import { FoldItem } from '../FoldItem'
 import { PositionInput } from '../PositionInput'
 import { SizeInput } from '../SizeInput'
-import './styles.less'
+import './styles.scss'
 
 const Positions = ['center', 'top', 'right', 'bottom', 'left']
 

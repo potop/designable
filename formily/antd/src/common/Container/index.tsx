@@ -1,7 +1,7 @@
 import { observer } from '@formily/reactive-react'
 import { DroppableWidget, IDroppableWidgetProps } from '@kdesignable/react'
 import React, { PropsWithChildren } from 'react'
-import './styles.less'
+import './styles.scss'
 
 export const Container: React.FC<PropsWithChildren<IDroppableWidgetProps>> =
   observer((props) => {

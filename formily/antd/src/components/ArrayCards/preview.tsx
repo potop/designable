@@ -21,7 +21,7 @@ import {
   queryNodesByComponentPath,
 } from '../../shared'
 import { createArrayBehavior } from '../ArrayBase'
-import './styles.less'
+import './styles.scss'
 
 const ensureObjectItemsNode = createEnsureTypeItemsNode('object')
 

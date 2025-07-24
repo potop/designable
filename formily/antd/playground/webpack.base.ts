@@ -67,10 +67,10 @@ export default {
         use: [MiniCssExtractPlugin.loader, require.resolve('css-loader')],
       },
       {
-        test: /\.less$/,
+        test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          { loader: 'css-loader' },
+          'style-loader',
+          'css-loader',
           {
             loader: 'postcss-loader',
             options: {
@@ -79,15 +79,7 @@ export default {
               },
             },
           },
-          {
-            loader: 'less-loader',
-            options: {
-              // modifyVars: getThemeVariables({
-              //   dark: true, // 开启暗黑模式
-              // }),
-              javascriptEnabled: true,
-            },
-          },
+          'sass-loader',
         ],
       },
       {

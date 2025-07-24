@@ -6,7 +6,7 @@ import { Radio } from 'antd'
 import cls from 'classnames'
 import React from 'react'
 import { FlexStyleSetter } from '../FlexStyleSetter'
-import './styles.less'
+import './styles.scss'
 export interface IDisplayStyleSetterProps {
   className?: string
   style?: React.CSSProperties

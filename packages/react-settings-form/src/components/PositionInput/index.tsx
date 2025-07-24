@@ -1,7 +1,7 @@
 import { usePrefix } from '@kdesignable/react'
 import cls from 'classnames'
 import React, { useEffect, useState } from 'react'
-import './styles.less'
+import './styles.scss'
 
 export interface IPositionInputProps {
   className?: string

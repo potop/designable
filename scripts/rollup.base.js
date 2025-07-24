@@ -1,5 +1,4 @@
 import commonjs from '@rollup/plugin-commonjs'
-import NpmImport from 'less-plugin-npm-import'
 import path from 'path'
 import externalGlobals from 'rollup-plugin-external-globals'
 import resolve from 'rollup-plugin-node-resolve'
@@ -47,10 +46,10 @@ const presets = () => {
     postcss({
       extract: true,
       minimize: true,
-      // extensions: ['.css', '.less', '.sass'],
+      // extensions: ['.css', '.scss', '.sass'],
       use: {
         less: {
-          plugins: [new NpmImport({ prefix: '~' })],
+          plugins: [],
           javascriptEnabled: true,
         },
         sass: {},

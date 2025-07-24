@@ -23,7 +23,7 @@ import {
 } from '../../shared'
 import { createArrayBehavior } from '../ArrayBase'
 import { createVoidFieldSchema } from '../Field'
-import './styles.less'
+import './styles.scss'
 
 const ensureObjectItemsNode = createEnsureTypeItemsNode('object')
 

@@ -8,7 +8,7 @@ import React, { Fragment, useMemo, useState } from 'react'
 import { DataSettingPanel } from './DataSettingPanel'
 import { TreePanel } from './TreePanel'
 import { transformDataToValue, transformValueToData } from './shared'
-import './styles.less'
+import './styles.scss'
 import { IDataSourceItem, ITreeDataSource } from './types'
 export interface IDataSourceSetterProps {
   className?: string

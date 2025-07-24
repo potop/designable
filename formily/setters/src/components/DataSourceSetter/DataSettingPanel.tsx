@@ -9,7 +9,7 @@ import { Button } from 'antd'
 import React, { Fragment, useMemo } from 'react'
 import { Header } from './Header'
 import { traverseTree } from './shared'
-import './styles.less'
+import './styles.scss'
 import { ITreeDataSource } from './types'
 
 const SchemaField = createSchemaField({

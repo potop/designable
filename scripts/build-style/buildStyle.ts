@@ -1,6 +1,6 @@
-import { copy, readFile, outputFile, existsSync } from 'fs-extra'
+import { copy, existsSync, outputFile, readFile } from 'fs-extra'
 
-import { getRollupBasePlugin, build } from './helper'
+import { build, getRollupBasePlugin } from './helper'
 
 export type BuildStyleOptions = {
   filename: string
@@ -60,7 +60,7 @@ const buildCss = async ({
   styleEntry,
 }: Pick<BuildStyleOptions, 'filename' | 'styleEntry'> &
   Record<'esmPaths' | 'libPaths', ReturnType<typeof getPaths>>) => {
-  // src/array-base/style.ts ===> src/array-base/style.less
+  // src/array-base/style.ts ===> src/array-base/style.scss
   const input = filename.replace(/style\.ts$/, styleEntry)
 
   if (!existsSync(input)) {
@@ -85,7 +85,7 @@ const buildCss = async ({
 export const buildStyle = async ({
   // xxxx/style.ts
   filename,
-  // example: style.less/main.scss
+  // example: style.scss/main.scss
   styleEntry,
   importCssCompilerToCssTransform,
 }: BuildStyleOptions): Promise<unknown> => {

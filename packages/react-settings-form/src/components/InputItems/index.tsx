@@ -1,7 +1,7 @@
 import { IconWidget, usePrefix } from '@kdesignable/react'
 import cls from 'classnames'
 import React, { PropsWithChildren, useContext } from 'react'
-import './styles.less'
+import './styles.scss'
 
 export interface IInputItemsContext {
   width?: string | number

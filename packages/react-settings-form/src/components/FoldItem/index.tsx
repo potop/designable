@@ -4,7 +4,7 @@ import { observable } from '@formily/reactive'
 import { IconWidget, usePrefix } from '@kdesignable/react'
 import cls from 'classnames'
 import React, { Fragment, PropsWithChildren, useMemo, useRef } from 'react'
-import './styles.less'
+import './styles.scss'
 
 const ExpandedMap = new Map<string, boolean>()
 

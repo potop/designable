@@ -12,7 +12,7 @@ import { LoadTemplate } from '../../common/LoadTemplate'
 import { AllLocales } from '../../locales'
 import { AllSchemas } from '../../schemas'
 import { createFieldSchema } from '../Field'
-import './styles.less'
+import './styles.scss'
 
 type formilyGrid = typeof FormilyGird
 

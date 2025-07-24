@@ -4,7 +4,7 @@ import { IconWidget, usePrefix } from '@kdesignable/react'
 import cls from 'classnames'
 import React from 'react'
 import { InputItems } from '../InputItems'
-import './styles.less'
+import './styles.scss'
 export interface IFlexStyleSetterProps {
   className?: string
   style?: React.CSSProperties

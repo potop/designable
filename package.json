@@ -60,6 +60,8 @@
   "resolutions": {
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.5",
     "yargs": "^16.x"
   },
   "dependencies": {
@@ -79,7 +81,6 @@
     "@types/react-dom": "^19.1.0",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
-    "@umijs/plugin-sass": "^1.1.1",
     "antd": "^5.26.1",
     "chalk": "^2.4.2",
     "chokidar": "^2.1.2",
@@ -118,9 +119,6 @@
     "jest-styled-components": "6.3.3",
     "jest-watch-lerna-packages": "^1.1.0",
     "lerna": "^4.0.0",
-    "less": "^4.1.1",
-    "less-loader": "^5.0.0",
-    "less-plugin-npm-import": "^2.1.0",
     "lint-staged": "^8.2.1",
     "mobx": "^6.13.7",
     "mobx-react-lite": "^4.1.0",
@@ -130,7 +128,6 @@
     "opencollective-postinstall": "^2.0.2",
     "param-case": "^3.0.4",
     "postcss": "^8.0.0",
-    "postcss-less": "^4.0.0",
     "prettier": "^2.2.1",
     "pretty-format": "^24.0.0",
     "pretty-quick": "^3.1.0",
@@ -146,6 +143,8 @@
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.36.0",
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.5",
     "semver": "7.5.2",
     "semver-regex": "3.1.4",
     "showdown": "^2.1.0",

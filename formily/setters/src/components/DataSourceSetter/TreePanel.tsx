@@ -6,7 +6,7 @@ import { Button, Tree, TreeProps } from 'antd'
 import React, { Fragment } from 'react'
 import { Header } from './Header'
 import { traverseTree } from './shared'
-import './styles.less'
+import './styles.scss'
 import { Title } from './Title'
 import { INodeItem, ITreeDataSource } from './types'
 

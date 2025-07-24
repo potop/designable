@@ -17,7 +17,7 @@ import React, { useMemo } from 'react'
 import { useLocales, useSnapshot } from './effects'
 import { SchemaField } from './SchemaField'
 import { SettingsFormContext } from './shared/context'
-import './styles.less'
+import './styles.scss'
 import { ISettingFormProps } from './types'
 
 const GlobalState = {

@@ -1,7 +1,7 @@
 import { observer } from '@formily/reactive-react'
 import { usePrefix } from '@kdesignable/react'
 import React, { ReactNode } from 'react'
-import './styles.less'
+import './styles.scss'
 
 export interface IHeaderProps {
   extra: ReactNode | null

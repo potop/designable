@@ -5,7 +5,7 @@ import { Button, ButtonProps } from 'antd'
 import cls from 'classnames'
 import React, { Fragment, useLayoutEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import './styles.less'
+import './styles.scss'
 
 export interface IDrawerSetterProps {
   text: React.ReactNode

@@ -4,7 +4,7 @@ import { InputProps } from 'antd/lib/input'
 import cls from 'classnames'
 import React, { useContext } from 'react'
 import { SettingsFormContext } from '../../shared/context'
-import './styles.less'
+import './styles.scss'
 export interface ImageInputProps extends Omit<InputProps, 'onChange'> {
   value?: string
   onChange?: (value: string) => void

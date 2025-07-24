@@ -3,7 +3,7 @@ import { clone, toArr } from '@formily/shared'
 import { IconWidget, TextWidget, usePrefix } from '@kdesignable/react'
 import React from 'react'
 import { traverseTree } from './shared'
-import './styles.less'
+import './styles.scss'
 import { INodeItem, ITreeDataSource } from './types'
 export interface ITitleProps extends INodeItem {
   treeDataSource: ITreeDataSource

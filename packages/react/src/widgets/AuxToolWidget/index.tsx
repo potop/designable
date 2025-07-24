@@ -7,7 +7,7 @@ import { Insertion } from './Insertion'
 import { Selection } from './Selection'
 import { SnapLine } from './SnapLine'
 import { SpaceBlock } from './SpaceBlock'
-import './styles.less'
+import './styles.scss'
 
 export const AuxToolWidget = () => {
   const engine = useDesigner()

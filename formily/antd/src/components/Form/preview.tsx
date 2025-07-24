@@ -6,7 +6,7 @@ import { DnFC, usePrefix } from '@kdesignable/react'
 import React, { useMemo } from 'react'
 import { AllLocales } from '../../locales'
 import { AllSchemas } from '../../schemas'
-import './styles.less'
+import './styles.scss'
 
 export const Form: DnFC<React.ComponentProps<typeof FormilyForm>> = observer(
   (props) => {

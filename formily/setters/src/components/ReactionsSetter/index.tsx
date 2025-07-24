@@ -19,7 +19,7 @@ import { initDeclaration } from './declarations'
 import { FieldPropertySetter } from './FieldPropertySetter'
 import { FulfillRunHelper } from './helpers'
 import { PathSelector } from './PathSelector'
-import './styles.less'
+import './styles.scss'
 import { IReaction } from './types'
 
 export interface IReactionsSetterProps {

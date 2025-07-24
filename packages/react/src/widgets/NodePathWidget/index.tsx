@@ -4,7 +4,7 @@ import React from 'react'
 import { useHover, usePrefix, useSelectedNode, useSelection } from '../../hooks'
 import { IconWidget } from '../IconWidget'
 import { NodeTitleWidget } from '../NodeTitleWidget'
-import './styles.less'
+import './styles.scss'
 
 export interface INodePathWidgetProps {
   workspaceId?: string

@@ -1,0 +1,12 @@
+// We copy-paste the same file into all sub-projects to workaround packaging issues
+$prefix-cls: 'dn';
+
+// Legacy ant design variables support:
+$black: #000;
+$blue-base: #1890ff;
+$primary-color: $blue-base;
+$text-color: rgba($black, 0.85);
+$text-color-secondary: rgba($black, 0.45);
+$component-background: #fff;
+$border-color-base: hsl(0, 0%, 85%);
+$border-color-split: hsl(0, 0%, 94%);

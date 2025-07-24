@@ -5,7 +5,7 @@ import React from 'react'
 import { AllLocales } from '../../locales'
 import { AllSchemas } from '../../schemas'
 import { createVoidFieldSchema } from '../Field'
-import './styles.less'
+import './styles.scss'
 
 export interface IDesignableTextProps {
   value?: string

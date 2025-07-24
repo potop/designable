@@ -1,0 +1,6 @@
+@use '../../variables.scss' as *;
+
+.#{$prefix-cls}-component-tree {
+  min-height: 100%;
+  min-width: 100%;
+}

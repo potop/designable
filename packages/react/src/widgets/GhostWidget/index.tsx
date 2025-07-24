@@ -4,7 +4,7 @@ import { CursorStatus } from '@kdesignable/core'
 import React, { useEffect, useRef } from 'react'
 import { useCursor, useDesigner, usePrefix } from '../../hooks'
 import { NodeTitleWidget } from '../NodeTitleWidget'
-import './styles.less'
+import './styles.scss'
 
 export const GhostWidget = observer(() => {
   const designer = useDesigner()

@@ -1,10 +1,10 @@
-import React from 'react'
-import format from 'dateformat'
 import { observer } from '@formily/reactive-react'
+import cls from 'classnames'
+import format from 'dateformat'
+import React from 'react'
 import { usePrefix, useWorkbench } from '../../hooks'
 import { TextWidget } from '../TextWidget'
-import cls from 'classnames'
-import './styles.less'
+import './styles.scss'
 
 export const HistoryWidget: React.FC = observer(() => {
   const workbench = useWorkbench()

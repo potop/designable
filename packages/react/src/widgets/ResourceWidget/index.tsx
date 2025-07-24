@@ -11,7 +11,7 @@ import React, { useState } from 'react'
 import { usePrefix } from '../../hooks'
 import { IconWidget } from '../IconWidget'
 import { TextWidget } from '../TextWidget'
-import './styles.less'
+import './styles.scss'
 
 export type SourceMapper = (resource: IResource) => React.ReactNode
 

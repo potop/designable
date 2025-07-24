@@ -10,7 +10,7 @@ import React, {
   useRef,
 } from 'react'
 import { usePrefix, useRegistry, useTheme } from '../../hooks'
-import './styles.less'
+import './styles.scss'
 
 const IconContext = createContext<IconProviderProps>(null)
 

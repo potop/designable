@@ -5,7 +5,7 @@ import React, { PropsWithChildren } from 'react'
 import { usePrefix, useSelected, useTreeNode } from '../../hooks'
 import { IconWidget } from '../IconWidget'
 import { TextWidget } from '../TextWidget'
-import './styles.less'
+import './styles.scss'
 
 export interface INodeActionsWidgetProps {
   className?: string
