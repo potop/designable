@@ -31,7 +31,7 @@
   "peerDependencies": {
     "@formily/reactive": "^2.3.7",
     "@formily/reactive-react": "^2.3.7",
-    "antd": "^5.26.1",
+    "antd": "^5.26.6",
     "react": "18.x || 19.x"
   },
   "engines": {

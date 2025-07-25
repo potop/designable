@@ -37,7 +37,7 @@
     "@formily/reactive": "^2.3.7",
     "@formily/reactive-react": "^2.3.7",
     "@formily/shared": "^2.3.7",
-    "antd": "^5.26.1"
+    "antd": "^5.26.6"
   },
   "peerDependencies": {
     "@formily/antd-v5": "^1.2.4",
@@ -45,7 +45,7 @@
     "@formily/reactive": "^2.3.7",
     "@formily/reactive-react": "^2.3.7",
     "@formily/shared": "^2.3.7",
-    "antd": "^5.26.1"
+    "antd": "^5.26.6"
   },
   "engines": {
     "node": ">=18.0.0",
