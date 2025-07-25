@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.0-beta.70(2025-07-24)
+
+### :blush: Other Changes
+
+1. [chore: add Ant Design v5 patch for React 19. Upgrade Ant Design and webpack](https://github.com/potop/kdesignable/commit/8523550) :point_right: ( [Alexander Simbirtsev](https://github.com/Alexander Simbirtsev) )
+
+1. [chore: add support for empty string in enum values and update dependencies](https://github.com/potop/kdesignable/commit/4da7962) :point_right: ( [Alexander Simbirtsev](https://github.com/Alexander Simbirtsev) )
+
 ## v1.0.0-beta.69(2025-06-24)
 
 ### :blush: Other Changes
