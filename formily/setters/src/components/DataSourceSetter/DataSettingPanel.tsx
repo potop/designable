@@ -4,7 +4,7 @@ import { createForm, Form as FormCore } from '@formily/core'
 import { createSchemaField } from '@formily/react'
 import { observer } from '@formily/reactive-react'
 import { TextWidget, usePrefix } from '@kdesignable/react'
-import { ValueInput } from '@kdesignable/react-settings-form'
+// import { ValueInput } from '@kdesignable/react-settings-form'
 import { Button } from 'antd'
 import React, { Fragment, useMemo } from 'react'
 import { Header } from './Header'
@@ -17,7 +17,7 @@ const SchemaField = createSchemaField({
     FormItem,
     Input,
     ArrayItems,
-    ValueInput,
+    // ValueInput,
   },
 })
 
@@ -29,6 +29,7 @@ export interface IDataSettingPanelProps {
 
 export const DataSettingPanel: React.FC<IDataSettingPanelProps> = observer(
   (props) => {
+    console.log('=== DataSettingPanel LOADED ===');
     const { allowExtendOption, effects } = props
     const prefix = usePrefix('data-source-setter')
     const form = useMemo(() => {
@@ -91,18 +92,18 @@ export const DataSettingPanel: React.FC<IDataSettingPanelProps> = observer(
                   x-decorator-props={{ type: 'divide' }}
                 >
                   <SchemaField.String
-                    title={
-                      <TextWidget token="SettingComponents.DataSourceSetter.label" />
-                    }
+                    x-decorator-props={{
+                      label: <TextWidget token="SettingComponents.DataSourceSetter.label" />
+                    }}
                     x-decorator="FormItem"
                     x-disabled={!allowExtendOption}
                     name="label"
                     x-component="Input"
                   />
                   <SchemaField.String
-                    title={
-                      <TextWidget token="SettingComponents.DataSourceSetter.value" />
-                    }
+                    x-decorator-props={{
+                      label: <TextWidget token="SettingComponents.DataSourceSetter.value" />
+                    }}
                     x-decorator="FormItem"
                     name="value"
                     x-component="ValueInput"
